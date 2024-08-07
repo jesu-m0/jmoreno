@@ -8,15 +8,14 @@
     width: 100vw; /* Asegura que el contenedor ocupe todo el ancho de la pantalla */
     justify-content: end;
   }
-  
-  .left-side, .right-side {
-    flex: 1;
+
+  .flex {
+    display: flex;
+    justify-content: flex-end; /* Alinea horizontalmente el botón a la derecha */
+
   }
 
   .navbar-container {
     flex: 1; /* Ocupa 1/4 del ancho total */
     max-width: 25%; /* Limita el ancho máximo a un cuarto de la pantalla */
-    background-color: #f4f4f4; /* Opcional: color de fondo para distinguir el área de la navbar */
-    border-right: 1px solid #ccc; /* Añade una línea divisoria a la derecha */
-    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es largo */
   }
