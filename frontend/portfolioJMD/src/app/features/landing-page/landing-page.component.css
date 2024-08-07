@@ -1,6 +1,9 @@
 .landing-container {
-    display: flex;
     height: 100vh;
+  }
+
+  .flex{
+    display: flex;
   }
   
   .left-side, .right-side {
@@ -15,4 +18,5 @@
     height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
     width: 100vw; /* Asegura que el contenedor ocupe todo el ancho de la pantalla */
   }
+  
   
