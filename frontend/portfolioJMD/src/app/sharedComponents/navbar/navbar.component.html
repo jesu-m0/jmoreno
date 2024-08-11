@@ -1,12 +1,9 @@
-<div class="flex justify-content-end">
-    <nav>
-      <div #underline class="underline"></div>
-      <div #underline class="underline"></div>
-      <div #underline class="underline"></div>
-      <a (click)="ul(0)">Home</a>
-      <a (click)="ul(1)">Experience</a>
-      <a (click)="ul(2)">Career</a>
-      <a (click)="ul(3)">About me</a>
-    </nav>
-  </div>
-  
+<nav>
+    <div #underline class="underline"></div>
+    <div #underline class="underline"></div>
+    <div #underline class="underline"></div>
+    <a class="" (click)="ul(0, '/')">Home</a>
+    <a class="" (click)="ul(1, '/projects')">Projects</a>
+    <a class="" (click)="ul(2, '/career')">Career</a>
+    <a class="" (click)="ul(3, '/about')">About me</a>
+  </nav>
