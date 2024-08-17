@@ -1,7 +1,9 @@
+@import "@fontsource/kalam/700.css";
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "@fontsource/kalam/700.css";
 
 @media (prefers-color-scheme: light) {
   :root {
