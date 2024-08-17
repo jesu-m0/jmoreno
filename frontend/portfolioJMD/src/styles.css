@@ -1,7 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fontsource/kalam/700.css";
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --favicon-color: black; /* Color para modo claro */
+  }
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --favicon-color: white; /* Color para modo oscuro */
+  }
+}
+
+/* Aplicar el color al favicon */
+link[rel="icon"] {
+  color: var(--favicon-color);
+}
 
 body {
     margin: 0;
