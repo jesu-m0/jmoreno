@@ -1,5 +1,6 @@
-import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'navbar',
@@ -7,13 +8,20 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('underline') underlines!: QueryList<ElementRef>;
+  private routerSubscription!: Subscription;
 
   constructor(private router: Router) {}
 
   ngAfterViewInit() {
     this.updateUnderline(this.router.url);
+
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.updateUnderline(event.urlAfterRedirects);
+      }
+    });
   }
 
   ul(index: number, path: string) {
@@ -23,7 +31,7 @@ export class NavbarComponent implements AfterViewInit {
       console.log(path);
       
       this.router.navigate([path]);
-    }, 500); // 500 ms retard
+    }, 500);
   }
 
   moveUnderline(index: number) {
@@ -38,7 +46,13 @@ export class NavbarComponent implements AfterViewInit {
     if (index !== -1) {
       this.moveUnderline(index);
     } else {
-      this.moveUnderline(0); //when the url is different to all others, stay in the first option
+      this.moveUnderline(0);
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.routerSubscription) {
+      this.routerSubscription.unsubscribe();
     }
   }
 }
