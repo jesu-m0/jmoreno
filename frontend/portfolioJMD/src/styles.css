@@ -5,6 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @media (prefers-color-scheme: light) {
   :root {
     --favicon-color: black; /* Color para modo claro */
