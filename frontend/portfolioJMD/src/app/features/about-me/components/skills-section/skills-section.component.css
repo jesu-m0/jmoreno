@@ -1,23 +1,25 @@
-@import "@fontsource/inconsolata/200.css"; 
-@import "@fontsource/inconsolata/300.css"; 
-@import "@fontsource/inconsolata/400.css"; 
-@import "@fontsource/inconsolata/500.css"; 
-@import "@fontsource/inconsolata/600.css"; 
-@import "@fontsource/inconsolata/700.css"; 
-@import "@fontsource/inconsolata/800.css"; 
-@import "@fontsource/inconsolata/900.css"; 
+@import "@fontsource/inconsolata/200.css";
+@import "@fontsource/inconsolata/300.css";
+@import "@fontsource/inconsolata/400.css";
+@import "@fontsource/inconsolata/500.css";
+@import "@fontsource/inconsolata/600.css";
+@import "@fontsource/inconsolata/700.css";
+@import "@fontsource/inconsolata/800.css";
+@import "@fontsource/inconsolata/900.css";
 
-.inconsolata-bold{
+.inconsolata-bold {
     font-family: 'Inconsolata', monospace;
     font-weight: 900;
 }
 
-.monospace-bold{
+.monospace-bold {
     font-family: monospace;
     font-weight: 900;
 }
 
-.min-px-all-children > * {
+.min-px-all-children>* {
     min-height: 4rem;
     min-width: 9rem;
 }
+
+
