@@ -13,16 +13,16 @@ export class ProjectsComponent {
 
   projects = [
     {
-      title: "Risto",
+      title: "Dean",
       images: [
         "assets/moreno-halfcolored.jpg",
         "assets/images/screenshot-example.png",
         "assets/images/screenshot-example.png"
       ],
       videos: [
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "https://www.youtube.com/embed/jNQXAC9IVRw"
+        "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
+      date: "May 2021",
       tech: "React, Node.js, MongoDB",
       problems: "Implementing real-time inventory updates",
       learned: "State management with Redux, WebSocket integration"
@@ -35,8 +35,7 @@ export class ProjectsComponent {
         "assets/images/screenshot-example.png"
       ],
       videos: [
-        "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        "https://www.youtube.com/embed/jNQXAC9IVRw"
+        "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       tech: "Vue.js, Express, OpenWeatherMap API",
       problems: "Handling API rate limits",
