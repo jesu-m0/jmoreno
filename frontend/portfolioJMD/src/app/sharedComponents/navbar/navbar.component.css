@@ -24,15 +24,15 @@ nav {
 	transition: transform var(--transition-duration) ease-in-out;
 
 	&:nth-child(1) {
-		background: yellow;
+		background: #F7B267;
 		transition: calc(var(--transition-duration) * 0.8);
 	}
 	&:nth-child(2) {
-		background: cyan;
+		background: #F4845F;
 		transition: calc(var(--transition-duration) * 1.2);
 	}
 	&:nth-child(3) {
-		background: magenta;
+		background: #000;
 	}
 }
 
