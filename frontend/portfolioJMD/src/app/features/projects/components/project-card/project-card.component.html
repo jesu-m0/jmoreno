@@ -1,0 +1,48 @@
+<div class="container mx-auto md:px-4">
+    <div class="grid gap-12 md:grid-cols-2">
+      <div *ngFor="let project of projects" class="relative mt-5 group">
+        <!-- Sombra Naranja -->
+        <div class="absolute inset-0">
+          <div class="w-full h-full opacity-100 blur-none group-hover:blur-xl transition-all duration-300 bg-gradient-to-r from-[#F25C54] via-[#F4845F] to-[#F7B267] rounded-xl"></div>
+        </div>
+  
+        <!-- Contenido de la Tarjeta -->
+        <div class="relative overflow-hidden bg-white rounded-lg">
+          <div class="relative w-full">
+            <div class="flex overflow-x-hidden snap-x snap-mandatory scroll-smooth">
+              <!-- Image Carousel Items -->
+              <div *ngFor="let image of project.images" class="flex-none w-full aspect-video relative overflow-hidden snap-start rounded-t-lg">
+                <img [src]="sanitizeUrl(image)" alt="Project image" class="w-full h-full object-cover">
+              </div>
+              <!-- Video Carousel Items -->
+              <div *ngFor="let video of project.videos" class="flex-none w-full aspect-video snap-start overflow-hidden rounded-t-lg">
+                <iframe width="100%" height="100%" [src]="sanitizeUrl(video)" title="Project video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+              </div>
+            </div>
+            <!-- Carousel Navigation Buttons -->
+            <button class="absolute left-2 top-1/2 rounded-full transform -translate-y-1/2 bg-white/80 hover:bg-white p-2" (click)="scrollPrev($event)">
+              <svg class="h-4 w-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 rounded-full transform -translate-y-1/2 bg-white/80 hover:bg-white p-2" (click)="scrollNext($event)">
+              <svg class="h-4 w-4 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 border-t border-gray-100">
+            <h2 class="text-xl font-medium mb-2">{{ project.title }}</h2>
+            <div class="space-y-1 text-sm">
+              <p><span class="font-medium text-orange-500">Tech:</span> {{ project.tech }}</p>
+              <p><span class="font-medium text-orange-500">Challenges:</span> {{ project.problems }}</p>
+              <p><span class="font-medium text-orange-500">Learnings:</span> {{ project.learned }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
