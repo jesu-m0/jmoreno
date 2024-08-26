@@ -38,7 +38,7 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       tech: "Vue.js, Express, OpenWeatherMap API",
-      problems: "Handling API rate limits",
+      problems: "Handling API rate limits Caching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API calls",
       learned: "Caching strategies, error handling in API calls"
     }
   ];
