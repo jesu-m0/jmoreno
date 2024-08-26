@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { LinkButtonComponentComponent } from '../../../../sharedComponents/link-button-component/link-button-component.component';
+import { LinkButtonGradientShadowComponent } from '../../../../sharedComponents/link-button-gradient-shadow/link-button-gradient-shadow.component';
 
 @Component({
   selector: 'app-skill-section',
   standalone: true,
-  imports: [LinkButtonComponentComponent],
+  imports: [LinkButtonGradientShadowComponent],
   templateUrl: './skill-section.component.html',
   styleUrl: './skill-section.component.css'
 })

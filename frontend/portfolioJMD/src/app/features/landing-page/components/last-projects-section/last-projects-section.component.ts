@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { LinkButtonComponentComponent } from '../../../../sharedComponents/link-button-component/link-button-component.component';
+import { LinkButtonGradientShadowComponent } from '../../../../sharedComponents/link-button-gradient-shadow/link-button-gradient-shadow.component';
 
 @Component({
   selector: 'app-last-projects-section',
   standalone: true,
   imports: [
-    LinkButtonComponentComponent
+    LinkButtonGradientShadowComponent
   ],
   templateUrl: './last-projects-section.component.html',
   styleUrl: './last-projects-section.component.css'
