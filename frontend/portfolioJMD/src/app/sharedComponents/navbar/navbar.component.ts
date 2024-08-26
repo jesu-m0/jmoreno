@@ -41,8 +41,9 @@ export class NavbarComponent implements AfterViewInit, OnDestroy {
   }
 
   updateUnderline(url: string) {
+    const cleanUrl = url.split('#')[0]; // We dont care what is after #
     const routes = ['/home', '/projects', '/career', '/about'];
-    const index = routes.indexOf(url);
+    const index = routes.indexOf(cleanUrl);
     if (index !== -1) {
       this.moveUnderline(index);
     } else {

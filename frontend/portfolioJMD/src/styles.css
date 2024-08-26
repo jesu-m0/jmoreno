@@ -34,13 +34,13 @@ body {
 
 
 .orange-gradient {
-  background: linear-gradient(to left, #F7B267, #F4845F, #F25C54);
+  background: linear-gradient(to right, #F25C54, #F4845F, #F7B267);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-orange-gradient {
-  background: linear-gradient(to left, #F7B267, #F4845F, #F25C54);
+  background: linear-gradient(to right, #F25C54, #F4845F, #F7B267);
   color: white;
 }
 

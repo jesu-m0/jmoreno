@@ -24,15 +24,15 @@ nav {
 	transition: transform var(--transition-duration) ease-in-out;
 
 	&:nth-child(1) {
-		background: #F7B267;
+		background: linear-gradient(to right, #F25C54, #F4845F, #F7B267);
 		transition: calc(var(--transition-duration) * 0.8);
 	}
 	&:nth-child(2) {
-		background: #F4845F;
+		background: #000;
 		transition: calc(var(--transition-duration) * 1.2);
 	}
 	&:nth-child(3) {
-		background: #000;
+		background: linear-gradient(to right, #F25C54, #F4845F, #F7B267);
 	}
 }
 
