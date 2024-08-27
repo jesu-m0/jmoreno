@@ -23,7 +23,7 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       date: "May 2021",
-      tech: "React, Node.js, MongoDB",
+      tech: ["React", "Node.js", "MongoDB"],
       problems: "Implementing real-time inventory updates",
       learned: "State management with Redux, WebSocket integration"
     },
@@ -37,8 +37,8 @@ export class ProjectsComponent {
       videos: [
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
-      tech: "Vue.js, Express, OpenWeatherMap API",
-      problems: "Handling API rate limits Caching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API callsCaching strategies, error handling in API calls",
+      tech: ["Vue.js", "Express", "OpenWeatherMap API"],
+      problems: "Handling API rate limits Caching strategies, error handling in API calls...",
       learned: "Caching strategies, error handling in API calls"
     },
     {
@@ -52,8 +52,8 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       date: "May 2021",
-      tech: "React, Node.js, MongoDB",
-      problems: "Implementing real-time inventory updates Implementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updatesImplementing real-time inventory updates",
+      tech: ["React", "Node.js", "MongoDB"],
+      problems: "Implementing real-time inventory updates...",
       learned: "State management with Redux, WebSocket integration"
     },
     {
@@ -67,7 +67,7 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       date: "May 2021",
-      tech: "React, Node.js, MongoDB",
+      tech: ["React", "Node.js", "MongoDB"],
       problems: "Implementing real-time inventory updates",
       learned: "State management with Redux, WebSocket integration"
     },
@@ -82,7 +82,7 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       date: "May 2021",
-      tech: "React, Node.js, MongoDB",
+      tech: ["React", "Node.js", "MongoDB"],
       problems: "Implementing real-time inventory updates",
       learned: "State management with Redux, WebSocket integration"
     },
@@ -97,10 +97,11 @@ export class ProjectsComponent {
         "https://www.youtube.com/embed/4g6fgkVVt78?si=FmqW-AC696Twnj7U&amp"
       ],
       date: "May 2021",
-      tech: "React, Node.js, MongoDB",
+      tech: ["React", "Node.js", "MongoDB"],
       problems: "Implementing real-time inventory updates",
       learned: "State management with Redux, WebSocket integration"
     }
   ];
+  
 
 }
