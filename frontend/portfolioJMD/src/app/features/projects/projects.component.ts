@@ -25,7 +25,7 @@ export class ProjectsComponent {
       date: "May 2021",
       tech: ["React", "Node.js", "MongoDB"],
       problems: "Implementing real-time inventory updates",
-      learned: "State management with Redux, WebSocket integration"
+      learned: "State management with Redux, WebSocket integration, State management with Redux, WebSocket integrationState management with Redux, WebSocket integrationState management with Redux, WebSocket integrationState management with Redux, WebSocket integrationState management with Redux, WebSocket integrationState management with Redux, WebSocket integration"
     },
     {
       title: "Weather App 2",
