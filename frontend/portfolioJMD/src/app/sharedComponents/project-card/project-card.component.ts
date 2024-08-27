@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Project } from '../../config/project.service';
 
 @Component({
   selector: 'app-project-card',
@@ -10,9 +11,11 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
-  @Input() projects: any;
 
+  @Input() projects : Project[] = [];
+  
   constructor(private sanitizer: DomSanitizer) {}
+
 
   sanitizeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);

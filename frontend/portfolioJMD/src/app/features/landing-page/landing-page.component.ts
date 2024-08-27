@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarComponent } from '../../sharedComponents/navbar/navbar.component';
 import { SkillSectionComponent } from './components/skill-section/skill-section.component';
 import { LastProjectsSectionComponent } from './components/last-projects-section/last-projects-section.component';
@@ -8,7 +8,8 @@ import { CareerSectionComponent } from './components/career-section/career-secti
 @Component({
   selector: 'landing-page',
   standalone: true,
-  imports: [NavbarComponent,
+  imports: [
+    NavbarComponent,
     LinkButtonGradientShadowComponent,
     SkillSectionComponent,
     LastProjectsSectionComponent,
@@ -18,6 +19,5 @@ import { CareerSectionComponent } from './components/career-section/career-secti
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
-
 
 }
