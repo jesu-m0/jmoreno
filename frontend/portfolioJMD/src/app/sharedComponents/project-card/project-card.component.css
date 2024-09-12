@@ -14,3 +14,11 @@
     break-inside: avoid;
     margin-bottom: 2rem;
 }
+
+.tech-badge {
+    @apply border border-gray-400 text-gray-400 text-xs font-semibold py-0.5 px-2 mr-2 rounded-full;
+}
+
+.tech-badge-outfilled {
+    @apply bg-gray-400 text-white text-xs font-bold py-0.5 px-2 mr-2 rounded-full;
+}

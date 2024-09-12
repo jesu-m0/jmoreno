@@ -49,28 +49,19 @@
                 </div>
                 <!--Card text-->
                 <div class="p-6 border-gray-100">
-                    <div class="flex flex-row justify-between items-center">
-                        <h2 class="text-xl font-medium mb-1">{{ project.title }}</h2>
-                        <div>
-                            <span *ngFor="let tech of project.tech"
-                                class="border border-gray-400 text-gray-400 text-xs font-semibold py-1 px-2 mr-2 rounded-full">
+                    <div class="">
+                        <h2 class="text-3xl font-black mb-2">{{ project.title }}</h2>
+                        <div class="mb-2">
+                            <span *ngFor="let tech of project.tech" class="tech-badge-outfilled">
                                 {{ tech }}
                             </span>
                         </div>
                     </div>
-                    <div class="space-y-1 text-sm">
-                        <p class="text-xs text-gray-500 mb-2">{{ project.date }}</p>
+                    <div class="text-sm">
+                        <p class="text-xs text-gray-500 mb-4">{{ project.date }}</p>
 
-
-                        <p><span class="font-medium text-orange-500">Challenges:</span> {{ project.problems }}</p>
-                        <p><span class="font-medium text-orange-500">Learnings:</span> {{ project.learned }}</p>
-
-                        <div class="pt-6">
-                            <span *ngFor="let tech of project.tech"
-                                class="border border-gray-400 text-gray-400 text-xs font-semibold py-1 px-2 mr-2 rounded-full">
-                                {{ tech }}
-                            </span>
-                        </div>
+                        <p class="text-base mb-2"><span class="font-bold text-orange-500">Challenges:</span> {{ project.problems }}</p>
+                        <p class="text-base"><span class="font-bold text-orange-500">Learnings:</span> {{ project.learned }}</p> 
                     </div>
                 </div>
             </div>
