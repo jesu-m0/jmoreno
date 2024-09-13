@@ -18,10 +18,10 @@ export class ProfesionalCareerComponent implements OnInit {
       title: "Software Engineer",
       location: "Fulda, Hesse, Germany",
       achievements: [
-        "Developed a tool to manage and assign staff to support shifts, starting from gathering requirements and creating functional diagrams. The frontend was built using Angular 18 with Tailwind CSS and DaisyUI, while the backend was powered by Spring Boot with JPA and PostgreSQL. Automated manual processes and improved resource planning efficiency.",
-        "Handled Dockerization using Docker Compose. Ensured seamless deployment, replication, and management of services across multiple environments.",
-        "Performed E2E and integration testing on critical systems using internally developed tools. Improved system stability and performance, ensuring <a href='https://youtu.be/4TYv2PhG89A?si=ac_ysiiFC-E83ivo&t=73' class='link'>smooth operations</a>.",
-        "Provided DevOps support with Azure DevOps for a short period, assisting with releases and maintaining microservices for reliable deployment processes."
+        "Developed a tool to manage and assign staff to support shifts, starting from gathering requirements and creating functional diagrams. The frontend was built using <strong class='font-bold'>Angular 18</strong> with <strong class='font-bold'>Tailwind CSS</strong> and <strong class='font-bold'>DaisyUI</strong>, while the backend was powered by <strong class='font-bold'>Spring Boot</strong> with <strong class='font-bold'>JPA</strong> and <strong class='font-bold'>PostgreSQL</strong>. Automated manual processes and improved resource planning efficiency.",
+        "Handled Dockerization using <strong class='font-bold'>Docker Compose</strong>. Ensured seamless deployment, replication, and management of services across multiple environments.",
+        "Performed <strong class='font-bold'>E2E and integration testing</strong> on critical systems using internally developed tools. Improved system stability and performance, ensuring <a href='https://youtu.be/4TYv2PhG89A?si=ac_ysiiFC-E83ivo&t=73' class='link'>smooth operations</a>.",
+        "Provided DevOps support with <strong class='font-bold'>Azure DevOps</strong> for a short period, assisting with releases and maintaining microservices for reliable deployment processes."
       ]
     },
     {
@@ -29,10 +29,10 @@ export class ProfesionalCareerComponent implements OnInit {
       "company": "EDAG Group",
       "title": "Software Engineer Intern",
       "achievements": [
-        "Configured an IoT sensor network and IP cameras using The Things Network and Fiware platforms.",
-        "Developed real-time data visualization dashboards with Spring Boot, Angular, and Grafana.",
-        "Designed and trained an AI-driven system for monitoring and predicting data in IoT sensor networks using LSTM neural networks and TensorFlow.",
-        "Created and structured multiple datasets of historical data to train the predictive AI model, optimizing the accuracy and reliability of system predictions."
+        "Developed real-time data visualization dashboards with <strong class='font-bold'>Spring Boot</strong>, <strong class='font-bold'>Angular</strong>, and <strong class='font-bold'>Grafana</strong>.",
+        "Designed and trained an <strong class='font-bold'>AI-driven system</strong> for monitoring and predicting data in <strong class='font-bold'>IoT sensor networks</strong> using <strong class='font-bold'>LSTM neural networks</strong> and <strong class='font-bold'>TensorFlow</strong>.",
+        "Created and structured multiple datasets of historical data to train the predictive AI model, optimizing the accuracy and reliability of system predictions.",
+        "Configured an <strong class='font-bold'>IoT sensor network</strong> and <strong class='font-bold'>IP cameras</strong> using <strong class='font-bold'>The Things Network</strong> and <strong class='font-bold'>Fiware platforms</strong>."
       ],
       "location": "Fulda, Hesse, Germany"
     }
