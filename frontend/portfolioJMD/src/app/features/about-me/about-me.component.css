@@ -1,0 +1,3 @@
+.btn-orange-gradient{
+    @apply font-medium transform hover:scale-110 transition-transform duration-300 rounded-full py-1 px-2 text-sm inline-block
+}
