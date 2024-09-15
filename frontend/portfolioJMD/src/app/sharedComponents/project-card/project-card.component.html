@@ -16,13 +16,13 @@
                         <!-- Image Carousel Items -->
                         <div *ngFor="let image of project.images"
                             class="flex-none w-full aspect-video relative overflow-hidden snap-start rounded-t-lg">
-                            <img [src]="sanitizeUrl(image)" alt="Project image" class="w-full h-full object-cover">
+                            <img [src]="sanitizeUrl(image)" alt="Image of the project {{ project.title }}" class="w-full h-full object-cover">
                         </div>
                         <!-- Video Carousel Items -->
                         <div *ngFor="let video of project.videos"
                             class="flex-none w-full aspect-video snap-start overflow-hidden rounded-t-lg">
                             <iframe width="100%" height="100%" [src]="sanitizeUrl(video)"
-                                title="Project {{ project.title }} video" frameborder="0"
+                                title="Video of the project {{ project.title }}" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
