@@ -11,5 +11,6 @@ import { RouterModule } from '@angular/router';
 export class LinkButtonGradientShadowComponent {
   @Input() text:String
   @Input() href:String
+  @Input() fragment?:string = ''
 
 }

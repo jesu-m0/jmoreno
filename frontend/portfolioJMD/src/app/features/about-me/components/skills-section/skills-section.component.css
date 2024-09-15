@@ -22,4 +22,6 @@
     min-width: 9rem;
 }
 
-
+#skills {
+    @apply md:scroll-mt-24
+}

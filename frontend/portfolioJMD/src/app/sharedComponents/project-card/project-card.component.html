@@ -16,7 +16,7 @@
                         <!-- Image Carousel Items -->
                         <div *ngFor="let image of project.images"
                             class="flex-none w-full aspect-video relative overflow-hidden snap-start rounded-t-lg">
-                            <img [src]="sanitizeUrl(image)" alt="Image of the project {{ project.title }}" class="w-full h-full object-cover">
+                            <img [src]="sanitizeUrl(image)" alt="Image of the project {{ project.title }}" class="w-full h-full object-cover" loading="lazy">
                         </div>
                         <!-- Video Carousel Items -->
                         <div *ngFor="let video of project.videos"
