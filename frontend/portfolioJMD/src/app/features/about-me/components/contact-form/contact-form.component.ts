@@ -42,13 +42,13 @@ export class ContactFormComponent {
       .subscribe({
         next: (response) => {
           this.loading = false;
-          this.successMessage = 'Email sent successfully';
+          this.successMessage = "Message sent! A confirmation email has also been sent to your inbox.";
           console.log('Emails sent successfully', response);
           form.reset();
         },
         error: (error) => {
           this.loading = false;
-          this.errorMessage = 'Error sending email. Check the info of the form another time...';
+          this.errorMessage = 'Oops! There was an issue sending your message. Please double-check your details and try again.';
           console.error('Error sending emails', error);
         }
       });
