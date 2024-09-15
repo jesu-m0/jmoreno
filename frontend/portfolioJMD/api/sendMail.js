@@ -32,6 +32,8 @@ module.exports = async (req, res) => {
   const publicKey = process.env.EMAIL_PUBLIC_KEY;
   const privateKey = process.env.EMAIL_PRIVATE_KEY;
 
+  console.log("private key added")
+
   // Ensure all variables are defined
   if (!serviceId || !userTemplateId || !myTemplateId || !publicKey) {
     return res.status(500).json({ message: 'EmailJS configuration error' });
@@ -43,13 +45,13 @@ module.exports = async (req, res) => {
       service_id: serviceId,
       template_id: userTemplateId,
       user_id: publicKey,
+      accessToken: privateKey,
       template_params: {
         user_name: user_name,
         user_email: user_email,
         subject: subject,
         message: message
-      },
-      accessToken: privateKey
+      }
     });
 
     // Send the user's message to yourself using EmailJS REST API
