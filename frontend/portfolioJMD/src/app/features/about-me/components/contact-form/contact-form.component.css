@@ -1,7 +1,7 @@
 .error{
-    @apply text-sm py-1 px-2 bg-rose-600 text-white font-semibold rounded-md
+    @apply inline-block text-sm py-1 px-2 bg-rose-600 text-white font-semibold rounded-md
 }
 
 .success{
-    @apply text-sm py-1 px-2 bg-emerald-500 text-white font-semibold rounded-md
+    @apply inline-block text-sm py-1 px-2 bg-emerald-500 text-white font-semibold rounded-md
 }

@@ -79,8 +79,8 @@
         </div>
         
 
-        <div *ngIf="errorMessage"><span class="error">{{ errorMessage }}</span></div>
-        <div *ngIf="successMessage"><span class="success">{{ successMessage }}</span></div>
+        <div *ngIf="errorMessage" class="error"><span>{{ errorMessage }}</span></div>
+        <div *ngIf="successMessage" class="success"><span>{{ successMessage }}</span></div>
         <div>
           <button type="submit" [disabled]="loading"
             class="mt-5 inline-flex bg-orange-gradient items-center px-4 py-2 text-sm font-medium bg-white rounded-lg hover:shadow-lg transition-shadow duration-300">
