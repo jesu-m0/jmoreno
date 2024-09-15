@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-link-button-gradient-shadow',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './link-button-gradient-shadow.component.html',
   styleUrl: './link-button-gradient-shadow.component.css'
 })

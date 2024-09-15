@@ -1,10 +1,11 @@
 import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit, OnDestroy } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'navbar',
   standalone: true,
+  imports: [RouterModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -26,12 +27,6 @@ export class NavbarComponent implements AfterViewInit, OnDestroy {
 
   ul(index: number, path: string) {
     this.moveUnderline(index);
-
-    setTimeout(() => {
-      console.log(path);
-      
-      this.router.navigate([path]);
-    }, 500);
   }
 
   moveUnderline(index: number) {
