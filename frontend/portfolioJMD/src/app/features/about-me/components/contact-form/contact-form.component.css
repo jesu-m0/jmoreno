@@ -1,0 +1,7 @@
+.error{
+    @apply text-sm py-1 px-2 bg-red-500 text-white font-semibold rounded-md
+}
+
+.success{
+    @apply text-sm py-1 px-2 bg-green-500 text-white font-semibold rounded-md
+}
