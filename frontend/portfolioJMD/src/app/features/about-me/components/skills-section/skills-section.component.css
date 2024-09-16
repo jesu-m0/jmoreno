@@ -1,15 +1,20 @@
-@import "@fontsource/inconsolata/200.css";
-@import "@fontsource/inconsolata/300.css";
-@import "@fontsource/inconsolata/400.css";
-@import "@fontsource/inconsolata/500.css";
 @import "@fontsource/inconsolata/600.css";
 @import "@fontsource/inconsolata/700.css";
-@import "@fontsource/inconsolata/800.css";
 @import "@fontsource/inconsolata/900.css";
 
 .inconsolata-bold {
     font-family: 'Inconsolata', monospace;
     font-weight: 900;
+}
+
+.inconsolata-700 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+}
+
+.inconsolata-semibold {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
 }
 
 .monospace-bold {
@@ -20,4 +25,8 @@
 .min-px-all-children>* {
     min-height: 4rem;
     min-width: 9rem;
+}
+
+.skill-title{
+    @apply ms-3 text-xl md:text-2xl text-gray-500 inconsolata-700
 }
