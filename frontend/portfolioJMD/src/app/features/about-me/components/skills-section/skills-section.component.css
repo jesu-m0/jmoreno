@@ -21,7 +21,3 @@
     min-height: 4rem;
     min-width: 9rem;
 }
-
-#skills {
-    @apply md:scroll-mt-24
-}
