@@ -11,3 +11,7 @@
     flex: 1; /* Ocupa 1/4 del ancho total */
     max-width: 25%; /* Limita el ancho máximo a un cuarto de la pantalla */
   }
+
+  .active {
+    @apply bg-gray-300 rounded-md p-2
+  }
