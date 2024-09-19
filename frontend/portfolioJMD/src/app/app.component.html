@@ -9,18 +9,3 @@
         <router-outlet></router-outlet>
     </div>
 </div>
-
-
-
-<div class="font-switcher flex items-center space-x-6 mb-32">
-    <button (click)="toggleFont()" class="rounded-lg px-4 py-2 border border-black hover:bg-gray-200 transition-all">
-        Switch Font
-    </button>
-
-    <div class="font-list flex space-x-4">
-        <span [class.active]="currentFontClass === 'montserrat-400'" class="cursor-pointer montserrat-400">montserrat</span>
-        <span [class.active]="currentFontClass === 'poppins-regular'" class="cursor-pointer poppins-regular">poppins</span>
-        <span [class.active]="currentFontClass === 'rem-600'" class="cursor-pointer rem-600">rem</span>
-        <span [class.active]="currentFontClass === 'default'" class="cursor-pointer">default</span>
-    </div>
-</div>
