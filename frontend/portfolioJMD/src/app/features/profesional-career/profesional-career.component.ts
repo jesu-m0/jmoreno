@@ -13,7 +13,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class ProfesionalCareerComponent implements OnInit {
   experiences = [
     {
-      period: "dic. 2023 - Actual",
+      period: "Dec. 2023 - Actual",
       company: "EDAG Group",
       title: "Software Engineer",
       location: "Fulda, Hesse, Germany",
