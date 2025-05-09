@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@fontsource/rethink-sans/400.css";
+@import "@fontsource/rethink-sans/600.css";
+@import "@fontsource/rethink-sans/700.css";
+@import "@fontsource/rethink-sans/800.css";
+
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary-orange:       #FA9819;
+  --color-primary-blue-tint:    #B6C9CF;
+  --color-primary-baby-blue:    #C6EBF7;
+
+  --color-secondary-navy:       #1E3D59;
+  --color-secondary-caption:    #48749E;
+  --color-secondary-sky-blue:   #DEEFFE;
+  --color-secondary-off-blue:   #E8EBEF;
+  --color-secondary-deep-orange:#CD4900;
+  --color-secondary-dark-grey:  #A3A3A3;
+  --color-secondary-grey:       #E5E5E5;
+}
+
+@layer base {
+  body {
+    font-family: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  h1 { @apply text-5xl font-bold; }
+  h2 { @apply text-4xl font-bold; }
+  h3 { @apply text-3xl font-semibold; }
+  h4 { @apply text-2xl font-medium; }
+  h5 { @apply text-xl  font-medium; }
+  h6 { @apply text-lg  font-medium; }
+}
