@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-skills-section',
-  standalone: true,
-  imports: [],
-  templateUrl: './skills-section.component.html',
-  styleUrl: './skills-section.component.css'
+    selector: 'app-skills-section',
+    imports: [],
+    templateUrl: './skills-section.component.html',
+    styleUrl: './skills-section.component.css'
 })
 export class SkillsSectionComponent {
 

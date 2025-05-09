@@ -4,11 +4,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Project } from '../../config/project.service';
 
 @Component({
-  selector: 'app-project-card',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './project-card.component.html',
-  styleUrl: './project-card.component.css'
+    selector: 'app-project-card',
+    imports: [CommonModule],
+    templateUrl: './project-card.component.html',
+    styleUrl: './project-card.component.css'
 })
 export class ProjectCardComponent {
 

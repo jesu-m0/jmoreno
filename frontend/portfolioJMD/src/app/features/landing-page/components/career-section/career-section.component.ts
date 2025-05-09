@@ -4,11 +4,10 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-career-section',
-  standalone: true,
-  imports: [LinkButtonGradientShadowComponent, CommonModule],
-  templateUrl: './career-section.component.html',
-  styleUrl: './career-section.component.css'
+    selector: 'app-career-section',
+    imports: [LinkButtonGradientShadowComponent, CommonModule],
+    templateUrl: './career-section.component.html',
+    styleUrl: './career-section.component.css'
 })
 export class CareerSectionComponent {
   experiences = [

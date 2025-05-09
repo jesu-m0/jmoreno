@@ -4,14 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-contact-form',
-  standalone: true,
-  imports: [
-    FormsModule,
-    CommonModule
-  ],
-  templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.css'
+    selector: 'app-contact-form',
+    imports: [
+        FormsModule,
+        CommonModule
+    ],
+    templateUrl: './contact-form.component.html',
+    styleUrl: './contact-form.component.css'
 })
 
 

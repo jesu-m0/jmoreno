@@ -3,12 +3,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-profesional-career',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './profesional-career.component.html',
-  styleUrl: './profesional-career.component.css',
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-profesional-career',
+    imports: [CommonModule],
+    templateUrl: './profesional-career.component.html',
+    styleUrl: './profesional-career.component.css',
+    encapsulation: ViewEncapsulation.None
 })
 export class ProfesionalCareerComponent implements OnInit {
   experiences = [

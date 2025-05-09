@@ -3,11 +3,10 @@ import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'navbar',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+    selector: 'navbar',
+    imports: [RouterModule],
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements AfterViewInit, OnDestroy {
   @ViewChildren('underline') underlines!: QueryList<ElementRef>;

@@ -4,14 +4,13 @@ import { Project, ProjectService } from '../../../../config/project.service';
 import { ProjectCardComponent } from '../../../../sharedComponents/project-card/project-card.component';
 
 @Component({
-  selector: 'app-last-projects-section',
-  standalone: true,
-  imports: [
-    LinkButtonGradientShadowComponent,
-    ProjectCardComponent
-  ],
-  templateUrl: './last-projects-section.component.html',
-  styleUrl: './last-projects-section.component.css'
+    selector: 'app-last-projects-section',
+    imports: [
+        LinkButtonGradientShadowComponent,
+        ProjectCardComponent
+    ],
+    templateUrl: './last-projects-section.component.html',
+    styleUrl: './last-projects-section.component.css'
 })
 export class LastProjectsSectionComponent {
 

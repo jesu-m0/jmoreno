@@ -4,11 +4,10 @@ import { Project, ProjectService } from '../../config/project.service';
 import { ProjectCardComponent } from '../../sharedComponents/project-card/project-card.component';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [ProjectsTimelineComponent, ProjectCardComponent],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+    selector: 'app-projects',
+    imports: [ProjectsTimelineComponent, ProjectCardComponent],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
 

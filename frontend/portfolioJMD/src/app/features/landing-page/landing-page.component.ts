@@ -7,18 +7,17 @@ import { CareerSectionComponent } from './components/career-section/career-secti
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'landing-page',
-  standalone: true,
-  imports: [
-    NavbarComponent,
-    LinkButtonGradientShadowComponent,
-    SkillSectionComponent,
-    LastProjectsSectionComponent,
-    CareerSectionComponent,
-    RouterModule
-  ],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.css'
+    selector: 'landing-page',
+    imports: [
+        NavbarComponent,
+        LinkButtonGradientShadowComponent,
+        SkillSectionComponent,
+        LastProjectsSectionComponent,
+        CareerSectionComponent,
+        RouterModule
+    ],
+    templateUrl: './landing-page.component.html',
+    styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
 
