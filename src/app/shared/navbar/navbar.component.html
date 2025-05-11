@@ -1,11 +1,50 @@
 <div class="w-[250px] h-[100vh] bg-white border-r-secondary-grey border-r">
   <!--nav header-->
-  <div class="flex items-center gap-2 py-8 pl-8 border-b-secondary-grey border-b">
-    <div class="w-4 h-4 rounded-full bg-primary-orange"></div>
-    <span class="text-base text-black">jmoreno.dev</span>
+  <div
+    class="flex items-center gap-1 py-6 pl-8 border-b-secondary-grey border-b group cursor-pointer"
+  >
+    <div class="w-4 h-4 rounded-full bg-primary-orange group-hover:bg-secondary-deep-orange transform transition-colors duration-300"></div>
+    <span class="group-hover:text-secondary-dark-grey transform transition-colors duration-300">jmoreno.dev</span>
   </div>
 
   <!--nav options-->
+  <div class="pl-8 border-b-secondary-grey border-b">
+    <nav>
+      <ul class="flex flex-col py-6">
+        <!-- career -->
+        <li>
+          <a class="nav-link">
+            <span class="nav-link__text"> Career </span>
+            <sup class="nav-link__counter"> 01 </sup>
+          </a>
+        </li>
+
+        <!-- projects -->
+        <li>
+          <a class="nav-link">
+            <span class="nav-link__text"> Projects </span>
+            <sup class="nav-link__counter"> 02 </sup>
+          </a>
+        </li>
+
+        <!-- About me -->
+        <li>
+          <a class="nav-link">
+            <span class="nav-link__text">
+              About me
+            </span>
+            <sup class="nav-link__counter">
+              03
+            </sup>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="py-6 pl-8">
+    <a class="text-secondary-dark-grey hover:text-secondary-grey transform transition-colors duration-300 cursor-pointer">Contact me</a>
+  </div>
 
 
 </div>
