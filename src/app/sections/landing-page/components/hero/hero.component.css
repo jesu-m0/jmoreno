@@ -1,0 +1,4 @@
+.header-background {
+  background: #ffb030;
+  background: linear-gradient(110deg,#50ff00 0%, #ff9e00 15%, #ff6d00 55%, #ff9e00 100%);
+}
