@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { IconComponent } from '../icon/icon.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { IconComponent } from '../icon/icon.component';
 
 @Component({
   selector: 'app-redirect-button',

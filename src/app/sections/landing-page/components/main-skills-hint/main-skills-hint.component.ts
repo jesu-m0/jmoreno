@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RedirectButtonComponent } from '../../../../shared/redirect-button/redirect-button.component';
+import { RedirectButtonComponent } from '../../../../shared/elements/redirect-button/redirect-button.component';
 
 @Component({
   selector: 'app-main-skills-hint',
