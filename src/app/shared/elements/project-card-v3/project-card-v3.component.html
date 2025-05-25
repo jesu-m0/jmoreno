@@ -1,0 +1,29 @@
+
+<div class="">
+  <app-subsection
+    [index]="project.index"
+    [subsectionTitle]="project.title"
+  ></app-subsection>
+
+  <div class="flex gap-10 pt-4">
+    <div class="w-1/2">
+      <img [src]="project.images[0]" />
+    </div>
+
+    <div class="w-1/2 flex flex-col justify-between">
+
+      <div class="flex justify-between">
+        <div>
+          <span>{{ project.tech }}</span>
+        </div>
+
+        <span class="text-secondary-deep-orange"> {{ project.date }} </span>
+      </div>
+
+      <p class="text-secondary-dark-grey tracking-tight">{{project.description}}</p>
+
+      <app-redirect-button class="ml-auto inline-flex pt-4" href="" icon="expand" label="see more" size=""></app-redirect-button>
+    </div>
+  </div>
+
+</div>
