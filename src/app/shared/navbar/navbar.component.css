@@ -25,3 +25,7 @@
 .nav-link:hover .nav-link__counter {
   color: var(--color-secondary-deep-orange);
 }
+
+.nav-link.router-link-active .nav-link__counter {
+  color: var(--color-secondary-deep-orange);
+}
