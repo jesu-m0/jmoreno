@@ -1,17 +1,38 @@
-
 <div class="">
   <app-subsection
-    [index]="project.index"
+    [index]="index"
     [subsectionTitle]="project.title"
   ></app-subsection>
 
   <div class="flex flex-col md:flex-row gap-4 md:gap-10 pt-4">
+    <!-- images -->
     <div class="md:w-1/2">
-      <img [src]="project.images[0]" />
+
+
+      <div class="relative w-full aspect-[16/9] overflow-hidden">
+        <!-- Blurred Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img
+            [src]="project.images[0]"
+            alt="Blurred background"
+            class="w-full h-full object-cover blur-sm"
+          />
+        </div>
+
+        <!-- Foreground Image -->
+        <div class="absolute inset-0 z-10 flex items-center justify-center">
+          <img
+            [src]="project.images[0]"
+            alt="Project main image"
+            class="max-w-full max-h-full object-contain"
+          />
+        </div>
+      </div>
+
     </div>
 
+    <!-- content -->
     <div class="md:w-1/2 flex flex-col justify-between">
-
       <div class="flex justify-between pb-4">
         <div>
           <span>{{ project.tech }}</span>
@@ -20,10 +41,17 @@
         <span class="text-secondary-deep-orange"> {{ project.date }} </span>
       </div>
 
-      <p class="text-secondary-dark-grey tracking-tight">{{project.description}}</p>
+      <p class="text-secondary-dark-grey tracking-tight">
+        {{ project.description }}
+      </p>
 
-      <app-redirect-button class="ml-auto inline-flex pt-4" href="" icon="expand" label="see more" size=""></app-redirect-button>
+      <app-redirect-button
+        class="ml-auto inline-flex pt-4"
+        href=""
+        icon="expand"
+        label="see more"
+        size=""
+      ></app-redirect-button>
     </div>
   </div>
-
 </div>

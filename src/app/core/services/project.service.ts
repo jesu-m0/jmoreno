@@ -1,26 +1,13 @@
 import { Injectable } from '@angular/core';
-
-export interface Project {
-  index: string;
-  title: string;
-  url?: string;
-  github?: string;
-  images: string[];
-  videos?: string[];
-  date: string;
-  tech: string[];
-  description?: string;
-  challenges?: string[];
-  results?: string[];
-}
+import { Project } from '../models/project.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectService {
+  private projectIndex: number = 2;
   private projects: Project[] = [
     {
-      index: '2a',
       title: 'TickTockClock',
       url: 'https://ticktockclock.jmoreno.dev/',
       github: 'https://github.com/jesu-m0/TickTockClock',
@@ -32,11 +19,11 @@ export class ProjectService {
         'assets/images/projects/ticktockclock/expanded-mobile-dark.jpg',
       ],
       date: 'feb 2025',
-      tech: ["React", "TypeScript", "Tailwind"],
-      description: 'A simple, customizable timer built with React. Set intervals, get notified with sound and visual cues. No backend.',
+      tech: ['React', 'TypeScript', 'Tailwind'],
+      description:
+        'A simple, customizable timer built with React. Set intervals, get notified with sound and visual cues. No backend.',
     },
     {
-      index: '2b',
       title: 'ZapCards',
       url: 'https://zapcards.jmoreno.dev/',
       github: 'https://github.com/jesu-m0/ZapCards',
@@ -47,11 +34,11 @@ export class ProjectService {
         'assets/images/projects/zapcards/topics-mobile.PNG',
       ],
       date: 'mar 2025',
-      tech: ["Next.js", "React", "TypeScript", "Tailwind"],
-      description: 'A flashcards app built with Next.js to enhance learning through active recall and spaced repetition. Review flashcards with an intuitive UI. I did it for myself, in order to study german. It is also perfect for students, language learners, and professionals.',
+      tech: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+      description:
+        'A flashcards app built with Next.js to enhance learning through active recall and spaced repetition. Review flashcards with an intuitive UI. I did it for myself, in order to study german. It is also perfect for students, language learners, and professionals.',
     },
     {
-      index: '2c',
       title: 'GrateMate',
       date: 'aug 2021',
       images: [
@@ -73,7 +60,6 @@ export class ProjectService {
       ],
     },
     {
-      index: '2d',
       title: 'Dean',
       images: [
         'assets/images/projects/dean/deanLandingPage.jpg',
@@ -97,7 +83,6 @@ export class ProjectService {
       ],
     },
     {
-      index: '2e',
       title: 'GigDigger',
       images: [
         'assets/images/projects/gigdigger/mainPage.png',
@@ -120,11 +105,10 @@ export class ProjectService {
       ],
     },
     {
-      index: '2f',
       title: 'Magic Room Records',
       images: [
-        'assets/images/projects/magicroom/discosPage.jpg',
-        'assets/images/projects/magicroom/groupPage.png',
+        'assets/images/projects/mrr/discosPage.jpg',
+        'assets/images/projects/mrr/groupPage.png',
       ],
       videos: ['https://www.youtube.com/embed/BCEpuv9zUVw?si=dkpvHQufAjUqS08u'],
       date: 'may 2021',
@@ -141,13 +125,36 @@ export class ProjectService {
     },
   ];
 
-  constructor() {}
-
-  getProjects() {
-    return this.projects;
+  getProjects(): Project[] {
+    return this.projects.map((project) => {
+      return {
+        ...project,
+        index: this.projectIndex + this.getIndex(project),
+      };
+    });
   }
 
-  get2Projects() {
-    return this.projects.slice(0, 2);
+  get2Projects(): Project[] {
+    return this.projects.slice(0, 2).map((project) => ({
+      ...project,
+      index: this.projectIndex + this.getIndex(project),
+    }));
+  }
+
+  getIndex(project: Project): string {
+    // find the numeric index
+    const idx = this.projects.indexOf(project);
+    if (idx === -1) {
+      throw new Error('Project not found');
+    }
+
+    // compute the letter: 'a' + idx
+    const code = 'a'.charCodeAt(0) + idx;
+    const maxCode = 'z'.charCodeAt(0);
+    if (code > maxCode) {
+      throw new Error('Ran out of letters!');
+    }
+
+    return String.fromCharCode(code);
   }
 }
