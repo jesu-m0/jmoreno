@@ -1,0 +1,16 @@
+.error {
+  font-size: 14px;
+  color: red;
+}
+
+.submit-error {
+  background-color: red;
+  color: white;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.submit-success {
+  background-color: green;
+  color: white;
+  padding: 0 0.5rem 0 0.5rem;
+}
