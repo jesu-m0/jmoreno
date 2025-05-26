@@ -1,17 +1,11 @@
-<div class="md:p-10 border-b border-secondary-grey">
-  <div class="flex gap-4">
-    <span class="text-6xl text-primary-orange">03</span>
-    <div class="">
-      <h2 class="text-6xl font-semibold">Projects</h2>
-    </div>
-  </div>
+<div class="px-4 pb-6 pt-10 md:p-10 border-b border-secondary-grey">
+  <app-title
+        index="03"
+        title="Projects"
+      ></app-title>
   <div class="flex flex-col gap-12 pt-14">
-    <app-project-card></app-project-card>
-    <app-project-card></app-project-card>
 
-    <hr class="text-secondary-grey" />
-
-    <div class="grid grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <app-project-card-v2 />
       <app-project-card-v2 />
     </div>
