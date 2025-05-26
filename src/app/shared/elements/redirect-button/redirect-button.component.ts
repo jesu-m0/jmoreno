@@ -17,6 +17,7 @@ export class RedirectButtonComponent {
     @Input() icon?: string;
     @Input() label!: string;
     @Input() href!: string;
+    @Input() fragment?: string;
     @Input() size: string = "w-6 h-6";
 
 }

@@ -8,7 +8,6 @@ import { TitleComponent } from "../../../../shared/elements/title/title.componen
 @Component({
   selector: 'app-project-hint',
   imports: [
-    ProjectCardComponent,
     ProjectCardV2Component,
     RedirectButtonComponent,
     ProjectCardV3Component,

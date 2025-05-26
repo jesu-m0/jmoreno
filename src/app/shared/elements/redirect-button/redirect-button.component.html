@@ -1,4 +1,4 @@
-<a [routerLink]="href" class="flex items-center space-x-2 px-2 py-1 border border-secondary-grey
+<a [routerLink]="href" [fragment]="fragment" class="flex items-center space-x-2 px-2 py-1 border border-secondary-grey
 transition-all duration-200 hover:border-secondary-dark-grey cursor-pointer">
   <app-icon *ngIf="icon" [name]="icon" [size]="size"></app-icon>
   <span>{{ label }}</span>
