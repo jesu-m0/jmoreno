@@ -24,7 +24,13 @@ export class ProjectService {
       title: 'TickTockClock',
       url: 'https://ticktockclock.jmoreno.dev/',
       github: 'https://github.com/jesu-m0/TickTockClock',
-      images: [],
+      images: [
+        'assets/images/projects/ticktockclock/mainpage-mobile-dark.jpg',
+        'assets/images/projects/ticktockclock/mainpage-mobile-light.jpg',
+        'assets/images/projects/ticktockclock/mainpage-desktop-dark.jpg',
+        'assets/images/projects/ticktockclock/intervals-mobile-dark.jpg',
+        'assets/images/projects/ticktockclock/expanded-mobile-dark.jpg',
+      ],
       date: 'feb 2025',
       tech: ["React", "TypeScript", "Tailwind"],
       description: 'A simple, customizable timer built with React. Set intervals, get notified with sound and visual cues. No backend.',
@@ -34,13 +40,18 @@ export class ProjectService {
       title: 'ZapCards',
       url: 'https://zapcards.jmoreno.dev/',
       github: 'https://github.com/jesu-m0/ZapCards',
-      images: [],
+      images: [
+        'assets/images/projects/zapcards/cardexample-mobile.PNG',
+        'assets/images/projects/zapcards/cardbackexample-mobile.PNG',
+        'assets/images/projects/zapcards/frontsidelangiaje-mobile.PNG',
+        'assets/images/projects/zapcards/topics-mobile.PNG',
+      ],
       date: 'mar 2025',
       tech: ["Next.js", "React", "TypeScript", "Tailwind"],
       description: 'A flashcards app built with Next.js to enhance learning through active recall and spaced repetition. Review flashcards with an intuitive UI. I did it for myself, in order to study german. It is also perfect for students, language learners, and professionals.',
     },
     {
-      index: '2a',
+      index: '2c',
       title: 'GrateMate',
       date: 'aug 2021',
       images: [
@@ -62,7 +73,7 @@ export class ProjectService {
       ],
     },
     {
-      index: '2b',
+      index: '2d',
       title: 'Dean',
       images: [
         'assets/images/projects/dean/deanLandingPage.jpg',
@@ -86,7 +97,7 @@ export class ProjectService {
       ],
     },
     {
-      index: '2c',
+      index: '2e',
       title: 'GigDigger',
       images: [
         'assets/images/projects/gigdigger/mainPage.png',
@@ -109,7 +120,7 @@ export class ProjectService {
       ],
     },
     {
-      index: '2d',
+      index: '2f',
       title: 'Magic Room Records',
       images: [
         'assets/images/projects/magicroom/discosPage.jpg',
