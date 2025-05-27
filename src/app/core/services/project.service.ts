@@ -30,7 +30,7 @@ export class ProjectService {
       images: [
         'assets/images/projects/zapcards/cardexample-mobile.PNG',
         'assets/images/projects/zapcards/cardbackexample-mobile.PNG',
-        'assets/images/projects/zapcards/frontsidelangiaje-mobile.PNG',
+        'assets/images/projects/zapcards/frontsidelanguaje-mobile.PNG',
         'assets/images/projects/zapcards/topics-mobile.PNG',
       ],
       date: 'mar 2025',
@@ -42,8 +42,10 @@ export class ProjectService {
       title: 'GrateMate',
       date: 'aug 2021',
       images: [
-        'assets/images/projects/gratemate/grateMate1.jpg',
-        'assets/images/projects/gratemate/grateMate2.jpg',
+        'assets/images/projects/gratemate/mainpage.jpg',
+        'assets/images/projects/gratemate/recipe.jpg',
+        'assets/images/projects/gratemate/recipeSteps.jpg',
+        'assets/images/projects/gratemate/shoppingList.jpg',
       ],
       videos: ['https://www.youtube.com/embed/4I4q5yg17qw?si=bVwGuWmjmVJyu4wW'],
       tech: ['Flutter'],
