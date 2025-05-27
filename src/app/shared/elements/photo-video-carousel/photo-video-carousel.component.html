@@ -78,14 +78,14 @@
   </button>
 
   <!-- Dots Indicator -->
-  <div class="flex justify-center items-center gap-[3px] mt-1 z-20">
+  <div class="flex justify-center items-center gap-[3px] mt-2 z-20">
     <button
       *ngFor="let _ of items; let i = index"
       (click)="goToSlide(i)"
-      class="rounded-full w-1 h-1 bg-secondary-dark-grey transition-transform duration-300"
+      class="w-2 h-2 bg-secondary-dark-grey transition-all duration-300"
       [ngClass]="{
-        'scale-100': i !== currentIndex,
-        'scale-150': i === currentIndex
+        'scale-50 opacity-75': i !== currentIndex,
+        'scale-150 mx-0.5': i === currentIndex
       }"
     ></button>
   </div>

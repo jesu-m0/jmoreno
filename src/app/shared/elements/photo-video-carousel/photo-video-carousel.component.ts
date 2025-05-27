@@ -4,7 +4,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-photo-video-carousel',
-  imports: [CommonModule],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './photo-video-carousel.component.html',
   styleUrl: './photo-video-carousel.component.css',
 })
