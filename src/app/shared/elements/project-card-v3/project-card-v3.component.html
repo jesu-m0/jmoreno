@@ -18,31 +18,9 @@
 
       <ng-template #photosOnly>
         <!-- videos array is empty -->
-        <app-photo-video-carousel [photos]="project.images"> </app-photo-video-carousel>
+        <app-photo-video-carousel [photos]="project.images">
+        </app-photo-video-carousel>
       </ng-template>
-
-
-      <!-- Static image with blur at the back
-      <div class="relative w-full aspect-[16/9] overflow-hidden">
-        <!-- Blurred Background Image
-        <div class="absolute inset-0 z-0">
-          <img
-            [src]="project.images[0]"
-            alt="Blurred background"
-            class="w-full h-full object-cover blur-sm brightness-75"
-          />
-        </div>
-
-        <!-- Foreground Image
-        <div class="absolute inset-0 z-10 flex items-center justify-center">
-          <img
-            [src]="project.images[0]"
-            alt="Project main image"
-            class="max-w-full max-h-full object-contain"
-          />
-        </div>
-      </div>
-      -->
     </div>
 
     <!-- content -->
@@ -60,11 +38,13 @@
       </p>
 
       <app-redirect-button
+        *ngIf="project.url"
         class="ml-auto inline-flex pt-4"
-        href=""
-        icon="expand"
-        label="TODO links to the apps when possible"
-        size=""
+        [href]="project.url"
+        icon="external-link"
+        label="see in action"
+        
+        [external]="true"
       ></app-redirect-button>
     </div>
   </div>

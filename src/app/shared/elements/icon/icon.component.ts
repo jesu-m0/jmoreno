@@ -12,7 +12,7 @@ export class IconComponent {
 
 
   get iconUrl(){
-    return `assets/icons/${this.name}.svg`;
+    return `assets/icons/redirectButtonIcons/${this.name}.svg`;
   }
 
 }

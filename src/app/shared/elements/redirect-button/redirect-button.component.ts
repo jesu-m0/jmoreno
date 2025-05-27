@@ -20,4 +20,6 @@ export class RedirectButtonComponent {
     @Input() fragment?: string;
     @Input() size: string = "w-6 h-6";
 
+    @Input() external = false;
+
 }
