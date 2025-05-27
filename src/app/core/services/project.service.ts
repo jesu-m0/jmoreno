@@ -21,7 +21,7 @@ export class ProjectService {
       date: 'feb 2025',
       tech: ['React', 'TypeScript', 'Tailwind'],
       description:
-        'A simple, customizable timer built with React. Set intervals, get notified with sound and visual cues. No backend.',
+        'A minimal, responsive timer web app designed for workouts and task tracking. Built with React and Tailwind CSS, it offers customizable intervals and a clean interface — all without requiring installation. Created out of frustration with cluttered, hard-to-use online timers that often require installation, and as a way to practice with React and bento grid layouts.',
     },
     {
       title: 'ZapCards',
@@ -36,11 +36,12 @@ export class ProjectService {
       date: 'mar 2025',
       tech: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
       description:
-        'A flashcards app built with Next.js to enhance learning through active recall and spaced repetition. Review flashcards with an intuitive UI. I did it for myself, in order to study german. It is also perfect for students, language learners, and professionals.',
+        'A flashcards app built with Next.js to enhance learning through active recall and spaced repetition. Review flashcards in multiple languages (English, German, Spanish, Italian, French, Portuguese) with an intuitive UI. Created for personal use to study German, this app is perfect for students, language learners, and professionals looking to improve their language skills or memorize information efficiently.',
     },
     {
       title: 'GrateMate',
-      date: 'aug 2021',
+      github: 'https://github.com/jesu-m0/GrateMate',
+      date: 'mar 2023',
       images: [
         'assets/images/projects/gratemate/mainpage.jpg',
         'assets/images/projects/gratemate/recipe.jpg',
