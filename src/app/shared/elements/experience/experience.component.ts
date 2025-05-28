@@ -12,7 +12,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 })
 export class ExperienceComponent {
   experience = {
-    period: 'Dec 2023 - Nov 2024',
+    period: 'Sept 2022 - Nov 2024',
     company: 'EDAG Group',
     title: 'Software Engineer',
     location: 'Fulda, Hesse, Germany',
