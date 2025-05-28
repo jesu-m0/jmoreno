@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>New message from {{name}}</h1>
+    <p><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></p>
+    <p><strong>Subject:</strong> {{subject}}</p>
+    <hr/>
+    <!-- {{{message}}} allows unescaped HTML (your <br/>s) -->
+    <div>{{{message}}}</div>
+  </body>
+</html>

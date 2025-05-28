@@ -6,6 +6,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Contact } from './model/contact.model';
+import { ContactService } from './service/contact.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -20,7 +22,7 @@ export class ContactMeComponent {
   successMessage: string | null = null;
   errorMessage: string | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private contactService: ContactService) {
     this.contactMe = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -30,19 +32,36 @@ export class ContactMeComponent {
   }
 
   onSubmit() {
-    this.loading = true;
-    this.successMessage = null;
-    this.errorMessage = null;
-
+    this.successMessage = this.errorMessage = null;
     if (this.contactMe.invalid) {
       this.contactMe.markAllAsTouched();
       this.errorMessage =
-        'Oops! There was an issue sending your message. Please double-check your details and try again.';
+        'Oops! Please fill out all fields correctly before sending.';
       return;
     }
 
+    this.loading = true;
+    const payload: Contact = this.contactMe.value;
 
-    console.log('Contact me:', this.contactMe.value);
-    this.successMessage = 'Message sent! A confirmation email has also been sent to your inbox.';
+    this.contactService.send(payload).subscribe({
+      next: (res) => {
+        // on success
+        this.successMessage =
+          'Message sent! A confirmation email has also been sent to your inbox (remember checking spam).';
+        this.contactMe.reset();
+      },
+      error: (err) => {
+        // on failure
+        console.error(err);
+        this.errorMessage =
+          'Oops! There was an issue sending your message. Please double-check your details and try again.';
+      },
+      complete: () => {
+        // stop spinner
+        this.loading = false;
+      },
+    });
   }
+
+
 }
