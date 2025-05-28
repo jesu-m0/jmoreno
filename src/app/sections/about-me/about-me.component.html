@@ -1,0 +1,164 @@
+<div class="px-4 py-6 lg:p-10 border-b border-secondary-grey">
+  <div class="flex flex-col md:flex-row gap-6 md:gap-10 mb-10">
+    <app-title
+      class="md:w-1/2"
+      index="01"
+      title="Jesus Moreno Duran"
+    ></app-title>
+    <div
+      class="md:w-1/2 flex flex-col gap-4 text-lg tracking-tight text-secondary-dark-grey"
+    >
+      <p>
+        Hi, I'm <span class="text-black">Jesús Moreno Duran</span>, a
+        24-year-old software developer from Málaga, Spain, now living in Fulda,
+        Germany. I started my journey in programming at the University of
+        Málaga, where later I got the chance to switch things up and spend my
+        final year at the Hochschule Fulda, which is how I ended up here.
+      </p>
+
+      <img
+        src="/assets/images/about/jesus-setenil.webp"
+        alt="Image of me in the sunset in Setenil"
+      />
+
+      <p>
+        I had the opportunity to
+        <span class="text-black">intern at EDAG</span> for a year and a half, a
+        time during which I gained a deep understanding of software engineering
+        in large-scale projects. At the end of this period, I
+        <span class="text-black">joined the team as a software engineer</span>,
+        where I've had the chance to contribute and, most importantly, to learn
+        in an environment full of interesting challenges. As Walter White once
+        said: "I did it for me. I liked it. I was good at it." Well, I'm still
+        working on that last part. You can find more details of this in the
+        <a
+          routerLink="/career"
+          class="text-secondary-deep-orange hover:cursor-pointer hover:underline"
+          >career</a
+        >
+        section.
+      </p>
+    </div>
+  </div>
+
+  <app-subsection id="skills" index="1a" subsectionTitle="Main skills"></app-subsection>
+  <div class="pb-10">
+    <app-skills></app-skills>
+  </div>
+  <hr class="text-secondary-grey">
+
+  <div class="pt-10 flex flex-col gap-10 md:flex-row md:justify-end pb-10">
+    <div class="w-1/2"></div>
+    <div
+      class="md:w-1/2 flex flex-col gap-4 text-lg tracking-tight text-secondary-dark-grey"
+    >
+      <p>
+        If you're curious to know what I've been working on, head over to the
+        <a
+          routerLink="/projects"
+          class="text-secondary-deep-orange hover:cursor-pointer hover:underline"
+          >projects</a
+        >
+        tab. You'll find some of my university projects along with some things
+        I've cooked up with friends. Nothing too crazy, but these are things
+        I've been learning from during my time as a student.
+      </p>
+
+      <p>
+        When I'm not pretending to study German (seriously, it's tough), I play
+        sports like soccer or ultimate frisbee, or cook dishes where the only
+        rule is that everything tastes better with a bit of spice.
+      </p>
+
+      <p>
+        If after all this you'd like to have a talk or take a risk and try one
+        of my dishes (with spice, of course), here's how you can contact me:
+      </p>
+    </div>
+  </div>
+  <app-subsection index="1b" subsectionTitle="Contact me"></app-subsection>
+  <div class="flex flex-col md:flex-row pt-6 gap-10">
+    <div class="md:w-1/2 gap-4 flex flex-col">
+      <h3 class="text-secondary-dark-grey pb-4">find me</h3>
+
+      <!-- Linkedin  -->
+      <a
+        href="https://www.linkedin.com/in/jesus-moreno-duran/?locale=en_US"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex group"
+      >
+        <div
+          class="w-6 h-6 text-secondary-dark-grey group-hover:text-black transition-all duration-200"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+            <defs>
+              <mask
+                id="ln-mask"
+                x="0"
+                y="0"
+                width="72"
+                height="72"
+                maskUnits="userSpaceOnUse"
+              >
+                <rect x="0" y="0" width="72" height="72" fill="white" />
+                <path
+                  d="M62,62 L51.3156,62 L51.3156,43.8021 C51.3156,38.8128 49.4198,36.0245 45.4707,36.0245 C41.1746,36.0245 38.9301,38.9261 38.9301,43.8021 L38.9301,62 L28.6333,62 L28.6333,27.3333 L38.9301,27.3333 L38.9301,32.0029 C38.9301,32.0029 42.0260,26.2742 49.3826,26.2742 C56.7357,26.2742 62,30.7645 62,40.0512 L62,62 Z
+           M16.3493,22.7940 C12.8421,22.7940 10,19.9297 10,16.3970 C10,12.8644 12.8421,10 16.3493,10 C19.8566,10 22.6970,12.8644 22.6970,16.3970 C22.6970,19.9297 19.8566,22.7940 16.3493,22.7940 Z
+           M11.0326,62 L21.7694,62 L21.7694,27.3333 L11.0326,27.3333 L11.0326,62 Z"
+                />
+              </mask>
+            </defs>
+
+            <path
+              d="M8,72 L64,72 C68.4183,72 72,68.4183 72,64 L72,8 C72,3.5817 68.4183,0 64,0 L8,0 C3.5817,0 0,3.5817 0,8 L0,64 C0,68.4183 3.5817,72 8,72 Z"
+              fill="currentColor"
+              mask="url(#ln-mask)"
+            />
+          </svg>
+        </div>
+        <p
+          class="ml-2 text-secondary-dark-grey group-hover:underline group-hover:text-black text-lg transition-all duration-200"
+        >
+          linkedin.com/in/jesus-moreno-duran
+        </p>
+      </a>
+
+      <!-- Mail  -->
+      <a
+        href="mailto:j.morenoduran.00@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex group"
+      >
+        <div
+          class="w-6 h-8 text-secondary-dark-grey group-hover:text-black transition-all duration-200"
+        >
+          <svg
+            viewBox="0 0 29 29"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M26.5833 10.0533V21.75C26.5833 22.391 26.3287 23.0056 25.8755 23.4589C25.4223 23.9121 24.8076 24.1667 24.1666 24.1667H4.83329C4.19235 24.1667 3.57766 23.9121 3.12445 23.4589C2.67124 23.0056 2.41663 22.391 2.41663 21.75V10.5004L4.83329 11.8175L13.92 16.7717C14.0981 16.8678 14.2975 16.9177 14.5 16.9167C14.7127 16.9145 14.9211 16.8561 15.1041 16.7475L24.1666 11.4671L26.5833 10.0533Z"
+              fill="currentColor"
+            />
+            <path
+              d="M26.5833 7.25001L24.1666 8.67584L14.5 14.3188L4.83329 9.06251L2.41663 7.73334V7.25001C2.41663 6.60907 2.67124 5.99438 3.12445 5.54117C3.57766 5.08796 4.19235 4.83334 4.83329 4.83334H24.1666C24.8076 4.83334 25.4223 5.08796 25.8755 5.54117C26.3287 5.99438 26.5833 6.60907 26.5833 7.25001Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <p
+          class="ml-2 text-secondary-dark-grey group-hover:underline group-hover:text-black text-lg transition-all duration-200"
+        >
+          j.morenoduran.00&#64;gmail.com
+        </p>
+      </a>
+    </div>
+    <div class="md:w-1/2">
+      <h3 id="contact-me" class="text-secondary-deep-orange pb-4">send me a message</h3>
+      <app-contact-me></app-contact-me>
+    </div>
+  </div>
+</div>

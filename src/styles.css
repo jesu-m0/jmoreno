@@ -1,0 +1,39 @@
+@import "@fontsource/rethink-sans/400.css";
+@import "@fontsource/rethink-sans/500.css";
+@import "@fontsource/rethink-sans/600.css";
+@import "@fontsource/rethink-sans/700.css";
+@import "@fontsource/rethink-sans/800.css";
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary-orange:       #ff8500;
+  --color-primary-lime:         #50ff00;
+  --color-primary-purple:       #9d4edd;
+
+  --color-primary-ultradeep-purple:  #240046;
+  --color-primary-deep-purple:  #3c096c;
+  --color-primary-dark-purple:  #5a189a;
+
+  --color-secondary-caption:    #48749E;
+
+  --color-secondary-light-orange:#ff9e00;
+  --color-secondary-deep-orange:#ff6d00;
+
+  --color-secondary-dark-grey:  #A3A3A3;
+  --color-secondary-grey:       #E5E5E5;
+}
+
+@layer base {
+  body {
+    font-family: "Rethink Sans", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  h1 { @apply text-5xl font-bold; }
+  h2 { @apply text-4xl font-bold; }
+  h3 { @apply text-3xl font-semibold; }
+  h4 { @apply text-2xl font-medium; }
+  h5 { @apply text-xl  font-medium; }
+  h6 { @apply text-lg  font-medium; }
+}

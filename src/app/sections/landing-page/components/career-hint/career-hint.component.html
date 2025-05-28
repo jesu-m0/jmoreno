@@ -1,0 +1,24 @@
+<div class="px-4 pt-10 pb-6 md:p-10 border-b border-secondary-grey">
+  <app-title index="02" title="Career"></app-title>
+
+  <div class="pt-7 md:pt-14">
+    <div class="flex flex-col md:flex-row gap-10">
+      <!-- Left Side -->
+      <div class="md:w-1/2 inline-flex">
+        <app-subsection index="2a" subsectionTitle="Experience"></app-subsection>
+      </div>
+      <!-- Right Side -->
+      <div class="md:w-1/2">
+        <app-experience></app-experience>
+      </div>
+    </div>
+    <div class="flex pt-6">
+      <app-redirect-button
+        icon="expand"
+        label="see more"
+        href="career"
+        size="h-4 w-4 "
+      ></app-redirect-button>
+    </div>
+  </div>
+</div>

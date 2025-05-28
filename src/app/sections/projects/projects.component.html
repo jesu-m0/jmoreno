@@ -1,0 +1,11 @@
+<div class="px-4 pt-10 pb-6 md:p-10 border-b border-secondary-grey">
+  <app-title index="03" title="Projects"></app-title>
+
+  <div class="flex flex-col gap-10 pt-8">
+    <app-project-card-v3
+      *ngFor="let project of projects"
+      [project]="project"
+      [index]="project.index ? project.index : 'XX'"
+    />
+  </div>
+</div>

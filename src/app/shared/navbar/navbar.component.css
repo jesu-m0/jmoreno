@@ -1,0 +1,31 @@
+.nav-link {
+  display: inline-flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.nav-link__text {
+  transition: color 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+.nav-link__counter {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-top: 0.25rem;
+  font-weight: 600;
+  color: var(--color-secondary-dark-grey);
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover .nav-link__text {
+  color: var(--color-secondary-dark-grey);
+}
+
+.nav-link:hover .nav-link__counter {
+  color: var(--color-secondary-deep-orange);
+}
+
+.nav-link.router-link-active .nav-link__counter {
+  color: var(--color-secondary-deep-orange);
+}

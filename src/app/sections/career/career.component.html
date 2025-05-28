@@ -1,0 +1,23 @@
+<div class="px-4 pt-10 pb-6 md:p-10 border-b border-secondary-grey">
+  <app-title index="02" title="Career"></app-title>
+
+  <!-- experience -->
+  <div class="py-6 flex flex-col md:flex-row">
+    <div class="md:w-1/2">
+      <app-subsection index="2a" subsectionTitle="Experience"></app-subsection>
+    </div>
+    <div class="md:w-1/2 flex flex-col gap-6">
+      <app-experience></app-experience>
+      <hr class="text-secondary-grey" />
+      <app-experience></app-experience>
+    </div>
+  </div>
+  <!-- education -->
+  <div class="pt-6">
+    <app-subsection index="2b" subsectionTitle="Education"></app-subsection>
+    <div class="flex flex-col gap-6 pt-10">
+      <app-education-card university="Hochschule Fulda" degree="Computer science" period="sep 2022 - dic 2023"></app-education-card>
+      <app-education-card university="University of Malaga" degree="Software engineering" period="sep 2018 - dic 2023" thesis='9.5/10'></app-education-card>
+    </div>
+  </div>
+</div>

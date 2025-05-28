@@ -1,0 +1,12 @@
+<div class="px-4 pb-6 pt-10 md:p-10 border-b border-secondary-grey">
+  <app-title
+        index="03"
+        title="Projects"
+      ></app-title>
+  <div class="flex flex-col gap-12 pt-10">
+
+    <app-project-card-v3 *ngFor="let project of projects" [project]="project" [index]="project.index?project.index:'XX'"/>
+
+  <app-redirect-button class="inline-flex" href="projects" icon="expand" label="see all projects" size=""></app-redirect-button>
+  </div>
+</div>

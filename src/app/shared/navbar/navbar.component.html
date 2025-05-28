@@ -1,0 +1,52 @@
+<div
+  class="bg-white border-secondary-grey border-b flex flex-row lg:w-[250px] lg:h-[100vh] lg:flex-col lg:border-r justify-between lg:justify-start"
+>
+  <!--nav header-->
+  <a routerLink="/"
+    class="flex items-center gap-1 py-2 md:py-4 lg:py-6 px-2 md:px-4 lg:px-8 border-secondary-grey  border-r lg:border-r-0 lg:border-b group cursor-pointer"
+  >
+    <div
+      class="w-4 h-4 rounded-full bg-primary-orange group-hover:opacity-50 transform transition-all duration-300"
+    ></div>
+    <span
+      class="group-hover:text-secondary-dark-grey transform transition-colors duration-300"
+      >jmoreno.dev</span
+    >
+</a>
+
+  <!--nav options-->
+  <nav class="lg:pl-8 border-secondary-grey border-r lg:border-r-0 lg:border-b grow lg:grow-0">
+    <ul class="flex flex-row lg:flex-col py-2 sm:py-4 lg:py-6 justify-evenly md:gap-4 lg:gap-0 px-2 md:px-4 lg:px-0">
+      <!-- About me -->
+      <li>
+        <a routerLink="/about" routerLinkActive="router-link-active" class="nav-link">
+          <span class="nav-link__text"> About me </span>
+          <sup class="nav-link__counter"> 01 </sup>
+        </a>
+      </li>
+      <!-- career -->
+      <li>
+        <a routerLink="/career" routerLinkActive="router-link-active" class="nav-link">
+          <span class="nav-link__text"> Career </span>
+          <sup class="nav-link__counter"> 02 </sup>
+        </a>
+      </li>
+
+      <!-- projects -->
+      <li>
+        <a routerLink="/projects" routerLinkActive="router-link-active" class="nav-link">
+          <span class="nav-link__text"> Projects </span>
+          <sup class="nav-link__counter"> 03 </sup>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!--contact me-->
+  <div class="p-4 lg:py-6 lg:pl-8 ml-auto lg:ml-0 hidden sm:inline-flex">
+    <a routerLink="/about" fragment="contact-me"
+      class="text-secondary-dark-grey hover:text-primary-orange transform transition-colors duration-300 cursor-pointer"
+      >Contact me</a
+    >
+  </div>
+</div>

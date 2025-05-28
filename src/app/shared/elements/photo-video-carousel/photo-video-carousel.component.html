@@ -1,0 +1,92 @@
+<div class="relative w-full mx-auto">
+  <!-- Slides -->
+  <div class="aspect-[16/9] overflow-hidden">
+    <div
+      *ngFor="let item of items; let i = index"
+      [hidden]="i !== currentIndex"
+      class="w-full h-full"
+    >
+      <!-- Image -->
+      <div *ngIf="i < photos.length" class="relative w-full h-full">
+        <!-- Blurred Background Image -->
+        <div class="absolute inset-0 z-0" style="pointer-events: none">
+          <img
+            [src]="item"
+            alt="Blurred background"
+            class="w-full h-full object-cover blur-md brightness-50"
+          />
+        </div>
+
+        <!-- Foreground Image -->
+        <div
+          class="absolute inset-0 z-10 flex items-center justify-center"
+          style="pointer-events: none"
+        >
+          <img
+            [src]="item"
+            alt="Project main image"
+            class="max-w-full max-h-full object-contain"
+          />
+        </div>
+      </div>
+
+      <!-- YouTube Video -->
+      <iframe
+        *ngIf="i >= photos.length"
+        [src]="item"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        class="w-full h-full"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Navigation Arrows (Optional) -->
+  <button
+    (click)="prev()"
+    class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/50 backdrop-blur-sm p-2 border border-secondary-grey z-20 w-8 h-8 flex items-center justify-center"
+  >
+    <!-- < svg-->
+    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      />
+    </svg>
+  </button>
+  <button
+    (click)="next()"
+    class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/50 backdrop-blur-sm p-2 border border-secondary-grey z-20 w-8 h-8 flex items-center justify-center"
+  >
+    <!-- > svg-->
+    <svg
+      class="w-4 h-4 rotate-180"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      />
+    </svg>
+  </button>
+
+  <!-- Dots Indicator -->
+  <div class="flex justify-center items-center gap-[3px] mt-2 z-20">
+    <button
+      *ngFor="let _ of items; let i = index"
+      (click)="goToSlide(i)"
+      class="w-2 h-2 bg-secondary-dark-grey transition-all duration-300"
+      [ngClass]="{
+        'scale-50 opacity-75': i !== currentIndex,
+        'scale-150 mx-0.5': i === currentIndex
+      }"
+    ></button>
+  </div>
+</div>

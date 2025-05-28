@@ -1,0 +1,61 @@
+<div class="">
+  <app-subsection
+    [index]="index"
+    [subsectionTitle]="project.title"
+  ></app-subsection>
+
+  <div class="flex flex-col md:flex-row gap-4 md:gap-10 pt-4">
+    <!-- images -->
+    <div class="md:w-1/2">
+      <ng-container *ngIf="(project.videos?.length ?? 0) > 0; else photosOnly">
+        <!-- videos array is non-empty -->
+        <app-photo-video-carousel
+          [photos]="project.images"
+          [videos]="project.videos"
+        >
+        </app-photo-video-carousel>
+      </ng-container>
+
+      <ng-template #photosOnly>
+        <!-- videos array is empty -->
+        <app-photo-video-carousel [photos]="project.images">
+        </app-photo-video-carousel>
+      </ng-template>
+    </div>
+
+    <!-- content -->
+    <div class="md:w-1/2 flex flex-col">
+      <div class="flex justify-between pb-4">
+        <div class="flex gap-4">
+          <span *ngFor="let tech of project.tech">{{ tech }} </span>
+        </div>
+
+        <span class="text-secondary-deep-orange"> {{ project.date }} </span>
+      </div>
+
+      <p class="text-secondary-dark-grey tracking-tight">
+        {{ project.description }}
+      </p>
+
+      <div class="ml-auto mt-auto flex gap-2">
+        <app-redirect-button
+          *ngIf="project.github"
+          class="ml-auto inline-flex pt-4"
+          [href]="project.github"
+          icon="github"
+          label="code"
+          size="w-5 h-5"
+          [external]="true"
+        ></app-redirect-button>
+        <app-redirect-button
+          *ngIf="project.url"
+          class="ml-auto inline-flex pt-4"
+          [href]="project.url"
+          icon="external-link"
+          label="see in action"
+          [external]="true"
+        ></app-redirect-button>
+      </div>
+    </div>
+  </div>
+</div>
