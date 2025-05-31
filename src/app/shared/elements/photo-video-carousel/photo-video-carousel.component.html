@@ -2,7 +2,7 @@
   <!-- Slides -->
   <div class="aspect-[1/1] md:aspect-[16/9] overflow-hidden">
     <div
-      *ngFor="let item of items; let i = index"
+      *ngFor="let item of items; let i = index; trackBy: trackByIndex"
       [hidden]="i !== currentIndex"
       class="w-full h-full"
     >
