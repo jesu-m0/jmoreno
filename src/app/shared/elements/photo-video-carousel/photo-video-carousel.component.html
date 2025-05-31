@@ -7,38 +7,45 @@
       class="w-full h-full"
     >
       <!-- Image -->
-      <div *ngIf="i < photos.length" class="relative w-full h-full">
-        <!-- Blurred Background Image -->
-        <div class="absolute inset-0 z-0" style="pointer-events: none">
-          <img
-            [src]="item"
-            alt="Blurred background"
-            class="w-full h-full object-cover blur-md brightness-50"
-          />
-        </div>
+      <ng-container *ngIf="item.type === 'photo'">
+        <div class="relative w-full h-full">
+          <!-- Blurred Background Image -->
+          <div class="absolute inset-0 z-0" style="pointer-events: none">
+            <img
+              [ngSrc]="item.photo.src"
+              [width]="item.photo.width"
+              [height]="item.photo.height"
+              alt="Blurred background"
+              class="w-full h-full object-cover blur-md brightness-50"
+            />
+          </div>
 
-        <!-- Foreground Image -->
-        <div
-          class="absolute inset-0 z-10 flex items-center justify-center"
-          style="pointer-events: none"
-        >
-          <img
-            [src]="item"
-            alt="Project main image"
-            class="max-w-full max-h-full object-contain"
-          />
+          <!-- Foreground Image -->
+          <div
+            class="absolute inset-0 z-10 flex items-center justify-center"
+            style="pointer-events: none"
+          >
+            <img
+              [ngSrc]="item.photo.src"
+              [width]="item.photo.width"
+              [height]="item.photo.height"
+              alt="Project main image"
+              class="max-w-full max-h-full object-contain"
+            />
+          </div>
         </div>
-      </div>
+      </ng-container>
 
       <!-- YouTube Video -->
-      <iframe
-        *ngIf="i >= photos.length"
-        [src]="item"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="w-full h-full"
-      ></iframe>
+      <ng-container *ngIf="item.type === 'video'">
+        <iframe
+          [src]="item.video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="w-full h-full"
+        ></iframe>
+      </ng-container>
     </div>
   </div>
 
@@ -80,7 +87,7 @@
   <!-- Dots Indicator -->
   <div class="flex justify-center items-center gap-[3px] mt-2 z-20">
     <button
-      *ngFor="let _ of items; let i = index"
+      *ngFor="let _ of items; let i = index; trackBy: trackByIndex"
       (click)="goToSlide(i)"
       class="w-2 h-2 bg-secondary-dark-grey transition-all duration-300"
       [ngClass]="{
