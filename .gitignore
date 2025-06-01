@@ -44,3 +44,5 @@ Thumbs.db
 # local environment variables
 .env
 .vercel
+
+.vercel

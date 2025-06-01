@@ -3,6 +3,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import Handlebars from 'handlebars';
 import nodemailer from 'nodemailer';
+import { log } from 'console';
 
 // ——— 1) Load & compile templates at startup ———
 const templatesDirectory = join(process.cwd(), 'api', 'email-templates');
@@ -12,16 +13,6 @@ const messageTpl     = Handlebars.compile(messageSrc);
 const confirmationTpl = Handlebars.compile(confirmationSrc);
 
 // ——— 2) Create reusable SMTP transporter ———
-const transporter2 = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false, // STARTTLS
-  auth: {
-    user: process.env.GMAIL_USER,         // your Gmail address
-    pass: process.env.GMAIL_APP_PASS,     // your App Password
-  },
-});
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -38,9 +29,9 @@ export default async function handler(req, res) {
   }
 
   // ——— 4) Extract & validate body ———
-  const { name, email, message } = req.body || {};
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Missing name, email, or message' });
+  const { name, subject, email, message } = req.body || {};
+  if (!name || !email || !message || !subject) {
+    return res.status(400).json({ error: 'Missing name, email, subject or message' });
   }
 
   try {
@@ -48,12 +39,12 @@ export default async function handler(req, res) {
     await transporter.sendMail({
       from: `"${process.env.FROM_NAME}" <${process.env.GMAIL_USER}>`,
       to:   process.env.CONTACT_EMAIL,
-      subject: `New contact from ${name}`,
+      subject: `New contact from ${name}: ${subject}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       html: messageTpl({
         name,
         email,
-        subject: `New contact from ${name}`,
+        subject,
         // use triple-stash in template to avoid escaping your <br/>
         message: message.replace(/\n/g, '<br/>'),
       }),
@@ -67,6 +58,8 @@ export default async function handler(req, res) {
       text: `Hi ${name},\n\nThanks for your message! I’ll read it shortly and reply as soon as I can.\n\nCheers,\n${process.env.FROM_NAME}`,
       html: confirmationTpl({
         name,
+        subject,
+        message,
         fromName: process.env.FROM_NAME,
       }),
     });

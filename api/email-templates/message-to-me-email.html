@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>New message from {{name}}</h1>
-    <p><strong>Email:</strong> <a href="mailto:{{email}}">{{email}}</a></p>
-    <p><strong>Subject:</strong> {{subject}}</p>
-    <hr/>
-    <!-- {{{message}}} allows unescaped HTML (your <br/>s) -->
-    <div>{{{message}}}</div>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px;">
+      <tr>
+        <td>
+          <h2 style="color: #000000; font-weight: normal;">New Contact Form Submission</h2>
+
+          <p style="line-height: 1.6;"><strong>From:</strong> {{name}} ({{email}})</p>
+          <p style="line-height: 1.6;"><strong>Subject:</strong> {{subject}}</p>
+          <p style="line-height: 1.6;"><strong>Message:</strong></p>
+
+          <blockquote style="line-height: 1.6; padding: 15px; background-color: #f0f0f0; border-radius: 5px;">{{message}}</blockquote>
+
+
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
+
+
+
