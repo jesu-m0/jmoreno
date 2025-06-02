@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProjectCardV2Component } from '../../../../shared/elements/project-card-v2/project-card-v2.component';
 import { RedirectButtonComponent } from '../../../../shared/elements/redirect-button/redirect-button.component';
 import { ProjectCardV3Component } from '../../../../shared/elements/project-card-v3/project-card-v3.component';
@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './project-hint.component.html',
   styleUrl: './project-hint.component.css',
 })
-export class ProjectHintComponent {
+export class ProjectHintComponent implements OnInit{
   projects: Project[] = [];
 
   constructor(private projectService: ProjectService) {}

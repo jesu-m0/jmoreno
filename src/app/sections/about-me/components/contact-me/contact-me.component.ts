@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { Contact } from './model/contact.model';
 import { ContactService } from './service/contact.service';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-contact-me',
@@ -43,7 +44,13 @@ export class ContactMeComponent {
     this.loading = true;
     const payload: Contact = this.contactMe.value;
 
-    this.contactService.send(payload).subscribe({
+    this.contactService.send(payload)
+    .pipe(
+      finalize (() => {
+        this.loading = false;
+      })
+    )
+    .subscribe({
       next: (res) => {
         // on success
         this.successMessage =
@@ -55,11 +62,7 @@ export class ContactMeComponent {
         console.error(err);
         this.errorMessage =
           'Oops! There was an issue sending your message. Please double-check your details and try again.';
-      },
-      complete: () => {
-        // stop spinner
-        this.loading = false;
-      },
+      }
     });
   }
 

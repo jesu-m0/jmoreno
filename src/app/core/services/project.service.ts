@@ -5,7 +5,7 @@ import { Project } from '../models/project.model';
   providedIn: 'root',
 })
 export class ProjectService {
-  private projectIndex: number = 2;
+  private projectIndex: number = 3; //index used in the portfolio "3a", "3b", "3c"...
   private projects: Project[] = [
     {
       title: 'TickTockClock',

@@ -1,7 +1,7 @@
 <div class="flex justify-between">
   <div>
     <p class="text-xl">{{ experience.company }}</p>
-    <p class="text-xl text-secondary-dark-grey">{{ experience.title }}</p>
+    <p class="text-xl text-secondary-dark-grey">{{ experience.role }}</p>
   </div>
   <div class="text-right">
     <p class="text-secondary-deep-orange">{{ experience.period }}</p>
@@ -12,7 +12,7 @@
   class="pt-6 flex flex-col gap-4 text-lg text-secondary-dark-grey tracking-tight"
 >
   <ul>
-    <li *ngFor="let achievement of experience.achievements">
+    <li *ngFor="let achievement of experience.roleHighlights">
       <span [innerHTML]="sanitizeHtml(achievement)"></span>
     </li>
   </ul>
