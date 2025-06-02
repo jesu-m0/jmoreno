@@ -5,22 +5,28 @@
   ></app-subsection>
 
   <div class="flex flex-col md:flex-row gap-4 md:gap-10 pt-4">
+    <div #carouselAnchor style="height: 1px"></div>
+
     <!-- images -->
     <div class="md:w-1/2">
-      <ng-container *ngIf="(project.videos?.length ?? 0) > 0; else photosOnly">
-        <!-- videos array is non-empty -->
-        <app-photo-video-carousel
-          [photos]="project.images"
-          [videos]="project.videos"
+      <ng-container *ngIf="showCarousel">
+        <ng-container
+          *ngIf="(project.videos?.length ?? 0) > 0; else photosOnly"
         >
-        </app-photo-video-carousel>
-      </ng-container>
+          <!-- videos array is non-empty -->
+          <app-photo-video-carousel
+            [photos]="project.images"
+            [videos]="project.videos"
+          >
+          </app-photo-video-carousel>
+        </ng-container>
 
-      <ng-template #photosOnly>
-        <!-- videos array is empty -->
-        <app-photo-video-carousel [photos]="project.images">
-        </app-photo-video-carousel>
-      </ng-template>
+        <ng-template #photosOnly>
+          <!-- videos array is empty -->
+          <app-photo-video-carousel [photos]="project.images">
+          </app-photo-video-carousel>
+        </ng-template>
+      </ng-container>
     </div>
 
     <!-- content -->
