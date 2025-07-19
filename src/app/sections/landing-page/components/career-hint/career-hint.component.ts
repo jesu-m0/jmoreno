@@ -25,9 +25,6 @@ export class CareerHintComponent implements OnInit{
   constructor(private experienceService: ExperienceService){}
 
   ngOnInit(): void {
-    console.log("getting latetst exp");
-
     this.experience = this.experienceService.getLatestExperience();
-    console.log("done:", this.experience );
   }
 }
