@@ -89,10 +89,10 @@
     <button
       *ngFor="let _ of items; let i = index; trackBy: trackByIndex"
       (click)="goToSlide(i)"
-      class="w-2 h-2 bg-secondary-dark-grey transition-all duration-300"
+      class="h-2 bg-secondary-dark-grey/50 transition-all ease-in-out duration-300 rounded"
       [ngClass]="{
-        'scale-50 opacity-75': i !== currentIndex,
-        'scale-150 mx-0.5': i === currentIndex
+        'w-2': i !== currentIndex,
+        'w-10': i === currentIndex
       }"
     ></button>
   </div>
