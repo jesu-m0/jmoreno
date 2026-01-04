@@ -1,5 +1,5 @@
 // app/app.config.ts
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, isDevMode } from '@angular/core';
 import {
   provideRouter,
   withInMemoryScrolling,
@@ -8,6 +8,7 @@ import {
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,6 +26,9 @@ export const appConfig: ApplicationConfig = {
       withRouterConfig({
         onSameUrlNavigation: 'reload'
       }),
-    ),
+    ), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          }),
   ],
 };
