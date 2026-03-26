@@ -1,13 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Experience } from '../../../core/models/experience.model';
 
 @Component({
   selector: 'app-experience',
-  imports: [
-    CommonModule
-  ],
+  imports: [],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.css',
 })

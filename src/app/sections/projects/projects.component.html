@@ -2,10 +2,11 @@
   <app-title index="03" title="Projects"></app-title>
 
   <div class="flex flex-col gap-10 pt-8">
-    <app-project-card-v3
-      *ngFor="let project of projects"
-      [project]="project"
-      [index]="project.index ? project.index : 'XX'"
-    />
+    @for (project of projects; track project) {
+      <app-project-card-v3
+        [project]="project"
+        [index]="project.index ? project.index : 'XX'"
+        />
+    }
   </div>
 </div>

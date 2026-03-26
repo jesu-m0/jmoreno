@@ -5,16 +5,15 @@ import { ProjectCardV3Component } from '../../../../shared/elements/project-card
 import { TitleComponent } from '../../../../shared/elements/title/title.component';
 import { Project } from '../../../../core/models/project.model';
 import { ProjectService } from '../../../../core/services/project.service';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-project-hint',
   imports: [
     RedirectButtonComponent,
     ProjectCardV3Component,
-    TitleComponent,
-    CommonModule
-  ],
+    TitleComponent
+],
   templateUrl: './project-hint.component.html',
   styleUrl: './project-hint.component.css',
 })

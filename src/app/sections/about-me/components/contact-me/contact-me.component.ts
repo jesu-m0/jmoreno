@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import {
   FormBuilder,
@@ -12,7 +12,7 @@ import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-contact-me',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.css',
 })

@@ -5,7 +5,7 @@ import { ExperienceComponent } from '../../shared/elements/experience/experience
 import { EducationCardComponent } from './components/education-card/education-card.component';
 import { Experience } from '../../core/models/experience.model';
 import { ExperienceService } from '../../core/services/experience.service';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-career',
@@ -13,9 +13,8 @@ import { CommonModule } from '@angular/common';
     TitleComponent,
     SubsectionComponent,
     ExperienceComponent,
-    EducationCardComponent,
-    CommonModule,
-  ],
+    EducationCardComponent
+],
   templateUrl: './career.component.html',
   styleUrl: './career.component.css',
 })

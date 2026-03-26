@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, NgZone, ViewChild } from '@angular/core';
 import { SubsectionComponent } from "../subsection/subsection.component";
 import { RedirectButtonComponent } from "../redirect-button/redirect-button.component";
 import { Project } from '../../../core/models/project.model';
-import { CommonModule } from '@angular/common';
+
 import { PhotoVideoCarouselComponent } from "../photo-video-carousel/photo-video-carousel.component";
 
 @Component({
@@ -10,7 +10,6 @@ import { PhotoVideoCarouselComponent } from "../photo-video-carousel/photo-video
   imports: [
     SubsectionComponent,
     RedirectButtonComponent,
-    CommonModule,
     PhotoVideoCarouselComponent
 ],
   templateUrl: './project-card-v3.component.html',

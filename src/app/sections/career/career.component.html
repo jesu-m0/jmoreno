@@ -7,17 +7,19 @@
       <app-subsection index="2a" subsectionTitle="Experience"></app-subsection>
     </div>
     <div class="md:w-1/2 flex flex-col gap-12">
-      <app-experience *ngFor="let exp of experiences" [experience]="exp"></app-experience>
+      @for (exp of experiences; track exp) {
+        <app-experience [experience]="exp"></app-experience>
+      }
       <!--hr class="text-secondary-grey" /-->
-      <!--app-experience></app-experience-->
-    </div>
+    <!--app-experience></app-experience-->
   </div>
-  <!-- education -->
-  <div class="pt-6">
-    <app-subsection index="2b" subsectionTitle="Education"></app-subsection>
-    <div class="flex flex-col gap-6 pt-10">
-      <app-education-card university="Hochschule Fulda" degree="Computer science" period="sep 2022 - dic 2023"></app-education-card>
-      <app-education-card university="University of Malaga" degree="Software engineering" period="sep 2018 - dic 2023" thesis='9.5/10'></app-education-card>
-    </div>
+</div>
+<!-- education -->
+<div class="pt-6">
+  <app-subsection index="2b" subsectionTitle="Education"></app-subsection>
+  <div class="flex flex-col gap-6 pt-10">
+    <app-education-card university="Hochschule Fulda" degree="Computer science" period="sep 2022 - dic 2023"></app-education-card>
+    <app-education-card university="University of Malaga" degree="Software engineering" period="sep 2018 - dic 2023" thesis='9.5/10'></app-education-card>
   </div>
+</div>
 </div>
