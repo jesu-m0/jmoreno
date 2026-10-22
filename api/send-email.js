@@ -115,17 +115,15 @@ export default async function handler(req, res) {
     });
 
     // ——— 8b) Send confirmation to visitor ———
+    // The recipient is whatever address the visitor typed, so nothing they
+    // wrote goes into this email: otherwise anyone could use the form to send
+    // their own text, from this Gmail account, to any address.
     await transporter.sendMail({
       from: `"${process.env.FROM_NAME}" <${process.env.GMAIL_USER}>`,
       to:   email,
-      subject: `Thanks for getting in touch, ${name}!`,
-      text: `Hi ${name},\n\nThanks for your message! I’ll read it shortly and reply as soon as I can.\n\nCheers,\n${process.env.FROM_NAME}`,
-      html: confirmationTpl({
-        name,
-        subject,
-        message: safeMessageHtml,
-        fromName: process.env.FROM_NAME,
-      }),
+      subject: 'Thanks for getting in touch!',
+      text: `Hi there,\n\nThanks for your message! I’ll read it shortly and reply as soon as I can.\n\nCheers,\n${process.env.FROM_NAME}`,
+      html: confirmationTpl({ fromName: process.env.FROM_NAME }),
     });
 
     return res.status(200).json({ success: true });
