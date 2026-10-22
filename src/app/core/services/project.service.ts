@@ -42,6 +42,7 @@ export class ProjectService {
         'assets/images/projects/deltahunter/telemetry-card-mobile.jpg',
         'assets/images/projects/deltahunter/charts-mobile.jpg',
       ],
+      videos: ['assets/videos/deltahunter-showcase.mp4'],
       date: 'mar 2026',
       tech: ['Next.js', 'TypeScript', 'Python', 'Tailwind'],
       description:
