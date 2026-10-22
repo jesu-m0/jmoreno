@@ -49,6 +49,19 @@
                 class="w-full h-full"
               ></iframe>
             }
+            <!-- Self-hosted Video -->
+            @if (item.type === 'videoFile') {
+              <video
+                [src]="item.src"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+                class="w-full h-full object-contain bg-black"
+              ></video>
+            }
           </div>
         }
 

@@ -8,6 +8,25 @@ export class ProjectService {
   private projectIndex: number = 3; //index used in the portfolio "3a", "3b", "3c"...
   private projects: Project[] = [
     {
+      title: 'Kage',
+      images: [
+        'assets/images/projects/kage/home-mobile.jpg',
+        'assets/images/projects/kage/channel-sources-mobile.jpg',
+        'assets/images/projects/kage/tv-home.jpg',
+        'assets/images/projects/kage/tv-player.jpg',
+        'assets/images/projects/kage/phone-as-remote.jpg',
+      ],
+      videos: ['assets/videos/kage-showcase.mp4'],
+      date: 'jun 2026',
+      tech: ['Next.js', 'Node.js', 'Docker', 'Android TV'],
+      description:
+        "The idea was simple: take an **IPTV or Acestream link** and **watch it from anywhere**. That's how Kage was born.\n\n" +
+        "You can create **channels, each with several sources**, and if one fails it **tries the next one on its own**. You can also just **paste a link** and it plays: Kage figures out what it is, so nobody needs to know what an m3u8 is.\n\n" +
+        "There's a **TV app** too, and you can pair your phone with it and **use it as the remote**. **One button** routes the whole app **through a VPN**, in the country you choose. Away from home it works the same: the server at home **converts the stream to HLS** and serves it through a **Cloudflare tunnel**, with **Next.js** on the front.",
+      disclaimer:
+        "Disclaimer: Kage is a private, personal project. It doesn't host or distribute any content; it only plays links that users provide themselves, and each user is responsible for what they watch.",
+    },
+    {
       title: 'DeltaHunter',
       url: 'https://delta-hunter.jmoreno.dev/',
       github: 'https://github.com/jesu-m0/DeltaHunter',

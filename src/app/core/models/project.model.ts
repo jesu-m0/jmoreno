@@ -7,7 +7,10 @@ export interface Project {
   videos?: string[];
   date: string;
   tech: string[];
+  /** Paragraphs split by a blank line; **text** renders bold. */
   description?: string;
+  /** Small print shown under the description. */
+  disclaimer?: string;
   challenges?: string[];
   results?: string[];
 }

@@ -24,7 +24,21 @@ export class ProjectCardV3Component {
 
   showCarousel = false;
 
+  /** Description split into paragraphs, each into plain/bold runs. */
+  paragraphs: { text: string; bold: boolean }[][] = [];
+
   constructor(private ngZone: NgZone) {}
+
+  ngOnInit(): void {
+    this.paragraphs = (this.project.description ?? '')
+      .split(/\n\s*\n/)
+      .map((p) =>
+        p
+          .split('**')
+          .map((text, i) => ({ text, bold: i % 2 === 1 }))
+          .filter((run) => run.text)
+      );
+  }
 
   ngAfterViewInit(): void {
     // If IntersectionObserver isn't supported, show the carousel immediately

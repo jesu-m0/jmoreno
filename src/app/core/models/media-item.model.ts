@@ -17,4 +17,10 @@ export interface VideoItem {
   video: SafeResourceUrl;
 }
 
-export type CarouselItem = PhotoItem | VideoItem;
+/** A self-hosted video file (e.g. an .mp4 under assets/), played natively. */
+export interface VideoFileItem {
+  type: 'videoFile';
+  src: string;
+}
+
+export type CarouselItem = PhotoItem | VideoItem | VideoFileItem;

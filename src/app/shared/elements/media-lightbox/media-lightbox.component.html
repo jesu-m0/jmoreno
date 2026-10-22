@@ -69,6 +69,17 @@
             class="w-[92vw] max-w-5xl aspect-video"
           ></iframe>
         }
+        @if (item.type === 'videoFile') {
+          <video
+            [src]="item.src"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            class="max-w-[92vw] max-h-[78vh] object-contain"
+          ></video>
+        }
       </div>
     }
   </div>

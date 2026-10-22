@@ -5,6 +5,7 @@ import {
   CarouselItem,
   PhotoDimension,
   PhotoItem,
+  VideoFileItem,
   VideoItem,
 } from '../../../core/models/media-item.model';
 import { MediaLightboxComponent } from '../media-lightbox/media-lightbox.component';
@@ -21,6 +22,7 @@ export class PhotoVideoCarouselComponent {
 
   @Input() videos?: string[];
   safeVideos: SafeResourceUrl[] = []; // will store sanitazed link for videos
+  videoFiles: string[] = []; // self-hosted videos, played with <video>
 
   /** Opt-in: click a slide to open it full-screen. Off keeps the previous behaviour. */
   @Input() enableLightbox = false;
@@ -43,10 +45,16 @@ export class PhotoVideoCarouselComponent {
         console.error('Error measuring images:', err);
       });
 
-    this.safeVideos = (this.videos || []).map((video) =>
-      this.sanitizer.bypassSecurityTrustResourceUrl(video)
-    );
+    const videos = this.videos || [];
+    this.videoFiles = videos.filter((v) => this.isVideoFile(v));
+    this.safeVideos = videos
+      .filter((v) => !this.isVideoFile(v))
+      .map((video) => this.sanitizer.bypassSecurityTrustResourceUrl(video));
     this.rebuildItems();
+  }
+
+  private isVideoFile(url: string): boolean {
+    return /\.(mp4|webm)$/i.test(url);
   }
 
   private loadAllDimensions(urls: string[]): Promise<PhotoDimension[]> {
@@ -97,7 +105,13 @@ export class PhotoVideoCarouselComponent {
       video: sv,
     }));
 
-    this.items = [...photoItems, ...videoItems];
+    // Self-hosted videos are showcase reels, so they lead; embeds keep trailing.
+    const videoFileItems: VideoFileItem[] = this.videoFiles.map((src) => ({
+      type: 'videoFile',
+      src,
+    }));
+
+    this.items = [...videoFileItems, ...photoItems, ...videoItems];
   }
 
   openLightbox(): void {
