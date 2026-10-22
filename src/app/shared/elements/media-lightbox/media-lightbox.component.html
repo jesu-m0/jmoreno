@@ -72,11 +72,12 @@
         @if (item.type === 'videoFile') {
           <video
             [src]="item.src"
-            autoplay
-            muted
+            [muted]="true"
             loop
             playsinline
             controls
+            (loadedmetadata)="resumeVideo($event, item)"
+            (timeupdate)="item.time = $any($event.target).currentTime"
             class="max-w-[92vw] max-h-[78vh] object-contain"
           ></video>
         }

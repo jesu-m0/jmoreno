@@ -1,5 +1,5 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, QueryList, ViewChildren } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {
   CarouselItem,
@@ -29,6 +29,9 @@ export class PhotoVideoCarouselComponent {
   lightboxOpen = false;
 
   currentIndex = 0;
+
+  @ViewChildren('carouselVideo')
+  carouselVideos!: QueryList<ElementRef<HTMLVideoElement>>;
 
   /** Rebuilt only when the source media changes, so the reference stays stable. */
   items: CarouselItem[] = [];
@@ -117,23 +120,48 @@ export class PhotoVideoCarouselComponent {
   openLightbox(): void {
     if (!this.enableLightbox || this.items.length === 0) return;
     this.lightboxOpen = true;
+    this.syncVideos();
   }
 
   closeLightbox(): void {
     this.lightboxOpen = false;
+    this.syncVideos();
+  }
+
+  /**
+   * Only the visible slide plays, and nothing plays behind the lightbox (which
+   * runs its own copy). A video that becomes visible again resumes from the
+   * shared position, so going full screen and back never restarts it.
+   */
+  syncVideos(): void {
+    this.carouselVideos?.forEach(({ nativeElement: video }) => {
+      const slide = Number(video.dataset['slide']);
+      const item = this.items[slide];
+      if (slide === this.currentIndex && !this.lightboxOpen) {
+        if (item?.type === 'videoFile' && item.time !== undefined && Math.abs(video.currentTime - item.time) > 0.5) {
+          video.currentTime = item.time;
+        }
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
   }
 
   goToSlide(index: number) {
     this.currentIndex = index;
+    this.syncVideos();
   }
 
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    this.syncVideos();
   }
 
   prev() {
     this.currentIndex =
       (this.currentIndex - 1 + this.items.length) % this.items.length;
+    this.syncVideos();
   }
 
   trackByIndex(index: number, item: unknown): number {

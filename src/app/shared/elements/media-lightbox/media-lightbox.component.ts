@@ -10,7 +10,7 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { CarouselItem } from '../../../core/models/media-item.model';
+import { CarouselItem, VideoFileItem } from '../../../core/models/media-item.model';
 
 @Component({
   selector: 'app-media-lightbox',
@@ -42,6 +42,13 @@ export class MediaLightboxComponent implements OnInit, OnDestroy {
   /** Keep in sync with the animation duration in the component stylesheet. */
   private static readonly EXIT_ANIMATION_MS = 180;
   private static readonly SWIPE_THRESHOLD_PX = 50;
+
+  /** Pick up where the carousel left off instead of restarting the video. */
+  resumeVideo(event: Event, item: VideoFileItem): void {
+    const video = event.target as HTMLVideoElement;
+    if (item.time) video.currentTime = item.time;
+    video.play().catch(() => {});
+  }
 
   ngOnInit(): void {
     this.previouslyFocused = document.activeElement as HTMLElement | null;

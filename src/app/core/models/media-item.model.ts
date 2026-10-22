@@ -21,6 +21,8 @@ export interface VideoItem {
 export interface VideoFileItem {
   type: 'videoFile';
   src: string;
+  /** Last playback position, shared by the carousel and the lightbox. */
+  time?: number;
 }
 
 export type CarouselItem = PhotoItem | VideoItem | VideoFileItem;

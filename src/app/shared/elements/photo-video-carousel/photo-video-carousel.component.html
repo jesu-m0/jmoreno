@@ -51,14 +51,18 @@
             }
             <!-- Self-hosted Video -->
             @if (item.type === 'videoFile') {
+              <!-- [muted] as a property: the bare attribute leaves video.muted false and the browser blocks autoplay. -->
               <video
+                #carouselVideo
                 [src]="item.src"
-                autoplay
-                muted
+                [attr.data-slide]="i"
+                [muted]="true"
                 loop
                 playsinline
                 controls
                 preload="metadata"
+                (loadeddata)="syncVideos()"
+                (timeupdate)="item.time = $any($event.target).currentTime"
                 class="w-full h-full object-contain bg-black"
               ></video>
             }
