@@ -51,17 +51,22 @@
             }
             <!-- Self-hosted Video -->
             @if (item.type === 'videoFile') {
-              <!-- [muted] as a property: the bare attribute leaves video.muted false and the browser blocks autoplay. -->
+              <!--
+                [muted] as a property: the bare attribute leaves video.muted false and the browser blocks autoplay.
+                Playback also starts from the component (syncVideos), not only on loadeddata: mobile browsers
+                don't fetch any data with preload="metadata" until something calls play().
+              -->
               <video
                 #carouselVideo
                 [src]="item.src"
                 [attr.data-slide]="i"
                 [muted]="true"
+                autoplay
                 loop
                 playsinline
                 controls
                 preload="metadata"
-                (loadeddata)="syncVideos()"
+                (loadedmetadata)="syncVideos()"
                 (timeupdate)="item.time = $any($event.target).currentTime"
                 class="w-full h-full object-contain bg-black"
               ></video>

@@ -1,5 +1,5 @@
 import { CommonModule, NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef, Input, QueryList, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, ElementRef, Input, QueryList, ViewChildren, inject } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {
   CarouselItem,
@@ -16,7 +16,7 @@ import { MediaLightboxComponent } from '../media-lightbox/media-lightbox.compone
   templateUrl: './photo-video-carousel.component.html',
   styleUrl: './photo-video-carousel.component.css',
 })
-export class PhotoVideoCarouselComponent {
+export class PhotoVideoCarouselComponent implements AfterViewInit {
   @Input({ required: true }) photos!: string[];
   photoData: PhotoDimension[] = []; // will measured photos
 
@@ -32,6 +32,8 @@ export class PhotoVideoCarouselComponent {
 
   @ViewChildren('carouselVideo')
   carouselVideos!: QueryList<ElementRef<HTMLVideoElement>>;
+
+  private destroyRef = inject(DestroyRef);
 
   /** Rebuilt only when the source media changes, so the reference stays stable. */
   items: CarouselItem[] = [];
@@ -115,6 +117,13 @@ export class PhotoVideoCarouselComponent {
     }));
 
     this.items = [...videoFileItems, ...photoItems, ...videoItems];
+  }
+
+  /** Video slides appear once the photos are measured; start them as soon as they exist. */
+  ngAfterViewInit(): void {
+    const sub = this.carouselVideos.changes.subscribe(() => this.syncVideos());
+    this.destroyRef.onDestroy(() => sub.unsubscribe());
+    this.syncVideos();
   }
 
   openLightbox(): void {
