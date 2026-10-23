@@ -46,6 +46,43 @@ export class ProjectService {
         "It's **in beta** and free for now. Built with React, TypeScript and Leaflet, with Supabase for accounts, progress and stats.",
     },
     {
+      title: 'Jaque',
+      images: [
+        'assets/images/projects/jaque/broadcast.jpg',
+        'assets/images/projects/jaque/blunder.jpg',
+        'assets/images/projects/jaque/review.jpg',
+        'assets/images/projects/jaque/threats.jpg',
+        'assets/images/projects/jaque/train.jpg',
+        'assets/images/projects/jaque/insights.jpg',
+      ],
+      videos: ['assets/videos/jaque-showcase.mp4'],
+      date: 'jul 2026',
+      tech: ['Next.js', 'Node.js', 'Stockfish', 'Docker'],
+      description:
+        "I like to play chess now and then, and chess.com's game review is paid. So I built my own.\n\n" +
+        "Jaque syncs my games through chess.com's public API and analyses them with **Stockfish on my own server**. When I make a mistake, it checks what I let my opponent do: take a piece for free, attack two pieces at once or checkmate me. From that it writes an explanation in plain words, **no AI**. Then my mistakes come back as exercises, filterable by type.\n\n" +
+        'Frontend in Next.js; backend in Node with Stockfish, in Docker on my server, behind a Cloudflare tunnel.',
+    },
+    {
+      title: 'TikWords',
+      url: 'https://tikwords.jmoreno.dev/',
+      images: [
+        'assets/images/projects/tikwords/mobile-home.jpg',
+        'assets/images/projects/tikwords/mobile-card-front.jpg',
+        'assets/images/projects/tikwords/mobile-card-back.jpg',
+        'assets/images/projects/tikwords/mobile-decks.jpg',
+        'assets/images/projects/tikwords/desktop-home.jpg',
+      ],
+      videos: ['assets/videos/tikwords-showcase.mp4'],
+      date: 'sep 2026',
+      tech: ['Next.js', 'React', 'PWA', 'Redis'],
+      description:
+        'I wanted to learn German as easily as I scroll, but the flashcard apps I tried felt like homework.\n\n' +
+        'TikWords has vocabulary decks in several languages: **you flip the card and swipe it**. It takes care of the details: der, die, das in colour with the plural next to it, or irregular verbs with all their forms.\n\n' +
+        "You don't need an account or an email, but you can **sync across devices** with a QR or a code.\n\n" +
+        "It's a PWA in Next.js that installs like an app. Your progress lives on the device, and sync stores it under that code in Redis (Upstash). Spaced repetition is FSRS.",
+    },
+    {
       title: 'DeltaHunter',
       url: 'https://delta-hunter.jmoreno.dev/',
       github: 'https://github.com/jesu-m0/DeltaHunter',
