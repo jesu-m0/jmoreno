@@ -20,11 +20,30 @@ export class ProjectService {
       date: 'jun 2026',
       tech: ['Next.js', 'Node.js', 'Docker', 'Android TV'],
       description:
-        "The idea was simple: take an **IPTV or Acestream link** and **watch it from anywhere**. That's how Kage was born.\n\n" +
-        "You can create **channels, each with several sources**, and if one fails it **tries the next one on its own**. You can also just **paste a link** and it plays: Kage figures out what it is, so nobody needs to know what an m3u8 is.\n\n" +
-        "There's a **TV app** too, and you can pair your phone with it and **use it as the remote**. **One button** routes the whole app **through a VPN**, in the country you choose. Away from home it works the same: the server at home **converts the stream to HLS** and serves it through a **Cloudflare tunnel**, with **Next.js** on the front.",
+        "The idea was simple: take an IPTV or Acestream link and **watch it from anywhere**. That's how Kage was born.\n\n" +
+        "You can create channels, each with **several sources**, and if one fails it tries the next one on its own. You can also just paste a link and it plays: Kage figures out what it is, so nobody needs to know what an m3u8 is.\n\n" +
+        "There's a TV app too, and you can pair your phone with it and **use it as the remote**. One button routes the whole app through a VPN, in the country you choose. Away from home it works the same: the server at home converts the stream to HLS and serves it through a Cloudflare tunnel, with Next.js on the front.",
       disclaimer:
         "Disclaimer: Kage is a private, personal project. It doesn't host or distribute any content; it only plays links that users provide themselves, and each user is responsible for what they watch.",
+    },
+    {
+      title: 'UrbanFighter',
+      url: 'https://urban-fighter.app/',
+      images: [
+        'assets/images/projects/urbanfighter/home-modes.jpg',
+        'assets/images/projects/urbanfighter/street-quiz.jpg',
+        'assets/images/projects/urbanfighter/wrong-answer.jpg',
+        'assets/images/projects/urbanfighter/pin-on-map.jpg',
+        'assets/images/projects/urbanfighter/points-of-interest.jpg',
+        'assets/images/projects/urbanfighter/session-result.jpg',
+      ],
+      videos: ['assets/videos/urbanfighter-showcase.mp4'],
+      date: 'mar 2026',
+      tech: ['React', 'TypeScript', 'Leaflet', 'Supabase'],
+      description:
+        "An app to prepare the street-map exam for public service entrance tests: **learn the streets by playing on the real map**. It starts with Málaga, for the firefighter entrance exam and the taxi licence test, but it's built to add more cities.\n\n" +
+        "It has three modes: we give you a spot and you pick the street, we give you the street and you pin it on the map, or you find landmarks, hospitals and key places. It uses each city council's official data, works on desktop or mobile and needs no sign-up. With an account, it keeps your progress, your streak and the streets you keep missing.\n\n" +
+        "It's **in beta** and free for now. Built with React, TypeScript and Leaflet, with Supabase for accounts, progress and stats.",
     },
     {
       title: 'DeltaHunter',
