@@ -5,7 +5,7 @@ import { Project } from '../models/project.model';
   providedIn: 'root',
 })
 export class ProjectService {
-  private projectIndex: number = 3; //index used in the portfolio "3a", "3b", "3c"...
+  private projectIndex: number = 2; //index used in the portfolio "2a", "2b", "2c"...
   private projects: Project[] = [
     {
       title: 'Kage',
@@ -30,12 +30,11 @@ export class ProjectService {
       title: 'UrbanFighter',
       url: 'https://urban-fighter.app/',
       images: [
-        'assets/images/projects/urbanfighter/home-modes.jpg',
-        'assets/images/projects/urbanfighter/street-quiz.jpg',
-        'assets/images/projects/urbanfighter/wrong-answer.jpg',
-        'assets/images/projects/urbanfighter/pin-on-map.jpg',
-        'assets/images/projects/urbanfighter/points-of-interest.jpg',
-        'assets/images/projects/urbanfighter/session-result.jpg',
+        'assets/images/projects/urbanfighter/desktop-home.jpg',
+        'assets/images/projects/urbanfighter/desktop-quiz-dark.jpg',
+        'assets/images/projects/urbanfighter/desktop-map-quiz.jpg',
+        'assets/images/projects/urbanfighter/mobile-quiz.jpg',
+        'assets/images/projects/urbanfighter/mobile-poi-quiz.jpg',
       ],
       videos: ['assets/videos/urbanfighter-showcase.mp4'],
       date: 'mar 2026',
