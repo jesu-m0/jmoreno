@@ -31,10 +31,11 @@ export class ProjectService {
       url: 'https://urban-fighter.app/',
       images: [
         'assets/images/projects/urbanfighter/desktop-home.jpg',
+        'assets/images/projects/urbanfighter/desktop-stats.jpg',
         'assets/images/projects/urbanfighter/desktop-quiz-dark.jpg',
         'assets/images/projects/urbanfighter/desktop-map-quiz.jpg',
         'assets/images/projects/urbanfighter/mobile-quiz.jpg',
-        'assets/images/projects/urbanfighter/mobile-poi-quiz.jpg',
+        'assets/images/projects/urbanfighter/mobile-stats.jpg',
       ],
       videos: ['assets/videos/urbanfighter-showcase.mp4'],
       date: 'mar 2026',
